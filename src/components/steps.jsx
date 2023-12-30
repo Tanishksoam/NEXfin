@@ -4,7 +4,10 @@ import { Link } from "react-router-dom";
 
 const Steps = () => {
   return (
-    <div className=" w-full flex flex-col gap-16 justify-center items-center py-20">
+    <div
+      id="steps"
+      className=" w-full flex flex-col gap-16 justify-center items-center py-20"
+    >
       <div className=" w-4/5 text-center flex flex-col gap-5">
         <h1 className=" text-6xl text-gray-800 font-titleFont">
           Follow <span className=" font-semibold">3 simple steps</span>

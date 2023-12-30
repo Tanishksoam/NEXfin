@@ -1,5 +1,6 @@
 import React from "react";
 import { logo } from "../assets/images";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
@@ -22,9 +23,11 @@ const Header = () => {
             <li className="text-base font-normal text-black hover:text-sky-700  cursor-pointer duration-100">
               Element
             </li>
-            <li className="text-base font-normal text-black hover:text-sky-700  cursor-pointer duration-100">
-              Blog
-            </li>
+            <Link to="/payment">
+              <li className="text-base font-normal text-black hover:text-sky-700  cursor-pointer duration-100">
+                Blog
+              </li>
+            </Link>
           </ul>
           <div className=" flex gap-5 justify-center items-center">
             <button className=" bg-sky-700 text-white px-6 py-2 rounded-full hover:bg-white hover:text-sky-700 hover:underline underline-offset-2 decoration-[1px] cursor-pointer duration-300">

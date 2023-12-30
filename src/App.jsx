@@ -8,10 +8,9 @@ import {
   Outlet,
   RouterProvider,
 } from "react-router-dom";
-import Hero from "./components/hero";
-import Steps from "./components/steps";
 import Footer from "./components/Footer";
 import PayTable from "./pages/PayTable";
+import Payment1 from "./pages/payment";
 
 const Layout = () => {
   return (
@@ -36,6 +35,10 @@ const Router = createBrowserRouter([
       {
         path: "/paytable",
         element: <PayTable />,
+      },
+      {
+        path: "/payment",
+        element: <Payment1 />,
       },
     ],
   },

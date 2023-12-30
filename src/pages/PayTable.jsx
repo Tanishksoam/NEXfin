@@ -33,6 +33,12 @@ const PayTable = () => {
     const arr = [...state];
     arr.push(temp);
     setState(arr);
+    nameRef.current.value = "";
+    contRef.current.value = "";
+    emailRef.current.value = "";
+    messageRef.current.value = "";
+    amountRef.current.value = "";
+    reminderDateRef.current.value = "";
   };
   return (
     <div className="w-full flex flex-col justify-center items-center">
@@ -133,25 +139,25 @@ const PayTable = () => {
             Submit
           </button>
         </div>
-        <div className=" flex flex-col gap-5 overflow-hidden">
+        <div className=" flex flex-col gap-5 overflow-scroll">
           {state.map((item) => (
             <div className=" flex flex-row gap-10">
-              <div className=" w-48 h-11 flex bg-slate-200 rounded-full items-center justify-center text-center ">
+              <div className=" w-48 h-11 flex bg-slate-200 rounded-full items-center justify-center text-center  ">
                 <h1>{item.name}</h1>
               </div>
-              <div className=" w-48 h-11 flex bg-slate-200 rounded-full items-center justify-center text-center ">
+              <div className=" w-48 h-11 flex bg-slate-200 rounded-full items-center justify-center text-center  ">
                 <h1>{item.cont}</h1>
               </div>
-              <div className=" w-48 h-11 flex bg-slate-200 rounded-full items-center justify-center text-center ">
+              <div className=" w-48 h-11 flex bg-slate-200 rounded-full items-center justify-center text-center  ">
                 <h1>{item.email}</h1>
               </div>
-              <div className=" w-48 h-11 flex bg-slate-200 rounded-full items-center justify-center text-center ">
+              <div className=" w-48 h-11 flex bg-slate-200 rounded-full items-center justify-center text-center  ">
                 <h1>{item.message}</h1>
               </div>
-              <div className=" w-48 h-11 flex bg-slate-200 rounded-full items-center justify-center text-center ">
+              <div className=" w-48 h-11 flex bg-slate-200 rounded-full items-center justify-center text-center  ">
                 <h1>{item.amount}</h1>
               </div>
-              <div className=" w-48 h-11 flex bg-slate-200 rounded-full items-center justify-center text-center ">
+              <div className=" w-48 h-11 flex bg-slate-200 rounded-full items-center justify-center text-center  ">
                 <h1>{item.reminderDate}</h1>
               </div>
             </div>

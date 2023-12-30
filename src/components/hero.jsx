@@ -18,12 +18,14 @@ const Hero = () => {
           </p>
         </div>
         <div className=" w-1/5 font-bodyFont">
-          <button className=" w-full h-10 bg-sky-700 rounded-full text-white flex justify-between items-center px-8">
-            <span>Lets Go...</span>
-            <span>
-              <BsArrowRight size={30} />
-            </span>
-          </button>
+          <a href="#steps">
+            <button className=" w-full h-10 bg-sky-700 rounded-full text-white flex justify-between items-center px-8">
+              <span>Lets Go...</span>
+              <span>
+                <BsArrowRight size={30} />
+              </span>
+            </button>
+          </a>
         </div>
       </div>
     </div>
