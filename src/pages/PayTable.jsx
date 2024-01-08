@@ -1,6 +1,6 @@
 import React, { useRef } from "react";
 import { useState } from "react";
-
+import axios from "axios";
 const PayTable = () => {
   const [state, setState] = useState([
     {
@@ -12,14 +12,13 @@ const PayTable = () => {
       reminderDate: "REMINDER DATE",
     },
   ]);
+  let count = 0;
   const nameRef = useRef("");
   const contRef = useRef("");
   const emailRef = useRef("");
   const messageRef = useRef("");
   const amountRef = useRef("");
   const reminderDateRef = useRef("");
-
-  console.log(state);
 
   const handleOnClick = () => {
     const temp = {
@@ -33,6 +32,7 @@ const PayTable = () => {
     const arr = [...state];
     arr.push(temp);
     setState(arr);
+    count += 1;
     nameRef.current.value = "";
     contRef.current.value = "";
     emailRef.current.value = "";
@@ -40,6 +40,48 @@ const PayTable = () => {
     amountRef.current.value = "";
     reminderDateRef.current.value = "";
   };
+
+  const getData = async (e) => {
+    e.preventDefault();
+
+    try {
+      for (let i = 1; i < state.length; i++) {
+        const { name, cont, email, message, amount, reminderDate } = state[i];
+
+        const response = await axios.post(
+          "https://try123-fe7b7-default-rtdb.firebaseio.com/trial.json",
+          {
+            Name: name,
+            contact: cont,
+            email,
+            message,
+            amount,
+            reminderDate,
+          },
+          {
+            headers: {
+              "Content-Type": "application/json",
+            },
+            params: {
+              key: "AIzaSyAppwdIVozAjBx_ZFbqOdQxQv7ECdsWuIk", // Replace with your actual API key
+            },
+          }
+        );
+
+        console.log(response);
+
+        if (response.status === 200) {
+          console.log(`Message sent for element ${i}`);
+        } else {
+          console.log(`Error in sending message for element ${i}`);
+        }
+      }
+    } catch (error) {
+      console.error("Error:", error);
+      alert("Error in sending message");
+    }
+  };
+
   return (
     <div className="w-full flex flex-col justify-center items-center">
       <div className=" w-4/5 text-center py-16">
@@ -135,7 +177,10 @@ const PayTable = () => {
           >
             Add
           </button>
-          <button className="cursor-pointer transition-all bg-sky-700 text-white px-6 py-2 rounded-2xl border-sky-900 border-b-[4px] hover:brightness-110 hover:-translate-y-[1px] hover:border-b-[6px] active:border-b-[2px] active:brightness-90 active:translate-y-[2px]">
+          <button
+            onClick={getData}
+            className="cursor-pointer transition-all bg-sky-700 text-white px-6 py-2 rounded-2xl border-sky-900 border-b-[4px] hover:brightness-110 hover:-translate-y-[1px] hover:border-b-[6px] active:border-b-[2px] active:brightness-90 active:translate-y-[2px]"
+          >
             Submit
           </button>
         </div>
