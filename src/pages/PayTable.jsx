@@ -57,7 +57,7 @@ const PayTable = () => {
         const { name, cont, email, message, amount, reminderDate } = state[i];
 
         const response = await axios.post(
-          "https://try123-fe7b7-default-rtdb.firebaseio.com/trial.json",
+          "https://nexfin-6b44a-default-rtdb.firebaseio.com/UserData.json",
           {
             Name: name,
             contact: cont,
@@ -71,7 +71,7 @@ const PayTable = () => {
               "Content-Type": "application/json",
             },
             params: {
-              key: "AIzaSyAppwdIVozAjBx_ZFbqOdQxQv7ECdsWuIk", // Replace with your actual API key
+              key: "AIzaSyBzBH8ZYp4nU9zmq8wyRUsg6WdThLihRaE", // Replace with your actual API key
             },
           }
         );
