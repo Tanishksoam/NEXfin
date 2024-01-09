@@ -11,6 +11,7 @@ import {
 import Footer from "./components/Footer";
 import PayTable from "./pages/PayTable";
 import Payment1 from "./pages/payment";
+import Client from "./components/client";
 
 const Layout = () => {
   return (
@@ -39,6 +40,10 @@ const Router = createBrowserRouter([
       {
         path: "/payment",
         element: <Payment1 />,
+      },
+      {
+        path: "/client",
+        element: <Client />,
       },
     ],
   },

@@ -1,6 +1,9 @@
-import React, { useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import { useState } from "react";
 import axios from "axios";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
 const PayTable = () => {
   const [state, setState] = useState([
     {
@@ -12,7 +15,11 @@ const PayTable = () => {
       reminderDate: "REMINDER DATE",
     },
   ]);
+
+  const [loading, setLoading] = useState(false);
+
   let count = 0;
+  let time = 0;
   const nameRef = useRef("");
   const contRef = useRef("");
   const emailRef = useRef("");
@@ -33,6 +40,7 @@ const PayTable = () => {
     arr.push(temp);
     setState(arr);
     count += 1;
+    time = 1000;
     nameRef.current.value = "";
     contRef.current.value = "";
     emailRef.current.value = "";
@@ -42,7 +50,7 @@ const PayTable = () => {
   };
 
   const getData = async (e) => {
-    e.preventDefault();
+    // e.preventDefault();
 
     try {
       for (let i = 1; i < state.length; i++) {
@@ -79,7 +87,19 @@ const PayTable = () => {
     } catch (error) {
       console.error("Error:", error);
       alert("Error in sending message");
+      return;
     }
+    setState([
+      {
+        name: "NAME",
+        cont: "CONTACT",
+        email: "EMAIL",
+        message: "MESSAGE",
+        amount: "AMOUNT",
+        reminderDate: "REMINDER DATE",
+      },
+    ]);
+    toast.success("data sent");
   };
 
   return (
@@ -178,7 +198,10 @@ const PayTable = () => {
             Add
           </button>
           <button
-            onClick={getData}
+            onClick={() => {
+              getData();
+              toast.success(`sending Data, it will take sometime`);
+            }}
             className="cursor-pointer transition-all bg-sky-700 text-white px-6 py-2 rounded-2xl border-sky-900 border-b-[4px] hover:brightness-110 hover:-translate-y-[1px] hover:border-b-[6px] active:border-b-[2px] active:brightness-90 active:translate-y-[2px]"
           >
             Submit
@@ -210,6 +233,18 @@ const PayTable = () => {
         </div>
       </>
       ;
+      <ToastContainer
+        position="top-center"
+        autoClose={1000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="dark"
+      />
     </div>
   );
 };
