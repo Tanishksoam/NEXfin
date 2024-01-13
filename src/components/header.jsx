@@ -30,9 +30,11 @@ const Header = () => {
             </Link>
           </ul>
           <div className=" flex gap-5 justify-center items-center">
+            <Link to="/login">
             <button className=" bg-sky-700 text-white px-6 py-2 rounded-full hover:bg-white hover:text-sky-700 hover:underline underline-offset-2 decoration-[1px] cursor-pointer duration-300">
               Login
             </button>
+            </Link>
             <button className=" bg-sky-700 text-white px-6 py-2 rounded-full hover:bg-white hover:text-sky-700 hover:underline underline-offset-2 decoration-[1px] cursor-pointer duration-300">
               Sign up
             </button>

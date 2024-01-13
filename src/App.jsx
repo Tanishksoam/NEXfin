@@ -12,6 +12,7 @@ import Footer from "./components/Footer";
 import PayTable from "./pages/PayTable";
 import Payment1 from "./pages/payment";
 import Client from "./components/client";
+import Login from "./pages/Login";
 
 const Layout = () => {
   return (
@@ -44,6 +45,10 @@ const Router = createBrowserRouter([
       {
         path: "/client",
         element: <Client />,
+      },
+      {
+        path: "/login",
+        element: <Login />,
       },
     ],
   },
