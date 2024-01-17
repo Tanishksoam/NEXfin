@@ -9,7 +9,7 @@ const Hero = () => {
           <h1 className=" text-6xl text-zinc-700 font-titleFont font-normal">
             Welcome! set{" "}
             <span className="font-semibold text-7xl">automated payment</span>{" "}
-            requests in minuets
+            requests in minutes
           </h1>
         </div>
         <div className=" w-1/2 text-center">
