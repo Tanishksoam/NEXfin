@@ -3,7 +3,8 @@ import { createSlice } from "@reduxjs/toolkit";
 export const nexSlice = createSlice({
   name: "nex",
   initialState: {
-    value: 0,
+    user_id: 0,
+    UserInfo: null,
   },
   reducers: {
     increment: (state) => {
