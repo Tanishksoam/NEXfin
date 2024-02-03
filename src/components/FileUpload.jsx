@@ -10,9 +10,6 @@ const FileUpload = () => {
   const [imgUrl, setImgUrl] = useState(null);
   const [progresspercent, setProgresspercent] = useState(0);
   const user = useSelector((state) => state.nex.UserInfo);
-  let a = 5;
-  a = a + 1;
-  console.log(a);
 
   const handleLinkChange = (e) => {
     setLink(e.target.value);
