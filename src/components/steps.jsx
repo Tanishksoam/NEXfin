@@ -82,9 +82,11 @@ const Steps = () => {
             </button>
 
             <p className=" text-2xl text-gray-500 font-titleFont"> Or</p>
-            <button className=" w-56 h-10 bg-sky-700 rounded-full text-white flex justify-center items-center justify-items-center text-center">
-              Upload Excel Sheet
-            </button>
+            <Link to="/fileupload">
+              <button className=" w-56 h-10 bg-sky-700 rounded-full text-white flex justify-center items-center justify-items-center text-center">
+                Upload Excel Sheet
+              </button>
+            </Link>
           </div>
         </div>
       </div>

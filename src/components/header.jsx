@@ -7,12 +7,16 @@ const Header = () => {
   const user = useSelector((state) => state.nex.UserInfo);
 
   return (
-    <div className="w-full h-20 bg-white border-b-[1px]  sticky top-0 z-50 ">
+    <div className="w-full md:h-20 h-10 bg-white border-b-[1px]  sticky md:top-0 top-6 z-50 px-2">
       <div className="max-w-screen-xl h-full mx-auto flex items-center justify-between">
         <div className=" h-20 justify-center items-center">
-          <img src={logo} alt="" className="w-32 justify-center items-center" />
+          <img
+            src={logo}
+            alt=""
+            className="sm:w-32 w-20 justify-center items-center"
+          />
         </div>
-        <div className="flex items-center gap-8 font-titleFont">
+        <div className="md:flex items-center gap-8 font-titleFont md:visible hidden">
           <ul className="flex items-center gap-8 font-titleFont">
             <li className="text-base font-normal text-black hover:text-sky-700  cursor-pointer duration-100">
               Home

@@ -1,24 +1,29 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
 // import { getAnalytics } from "firebase/analytics";
-import {getAuth} from "firebase/auth";
+import { getAuth } from "firebase/auth";
 // import {} from "firebase/auth";
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
-
+import { getStorage } from "firebase/storage";
+import { getDatabase } from "firebase/database";
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyC9bqleuMdtOI65VEQjxWTjbCDk-mQ0xHc",
-  authDomain: "bazarapp-a1e1b.firebaseapp.com",
-  projectId: "bazarapp-a1e1b",
-  storageBucket: "bazarapp-a1e1b.appspot.com",
-  messagingSenderId: "1037251876019",
-  appId: "1:1037251876019:web:94753b8bee08449ac4ccc6"
+  apiKey: "AIzaSyBzBH8ZYp4nU9zmq8wyRUsg6WdThLihRaE",
+  authDomain: "nexfin-6b44a.firebaseapp.com",
+  databaseURL: "https://nexfin-6b44a-default-rtdb.firebaseio.com",
+  projectId: "nexfin-6b44a",
+  storageBucket: "nexfin-6b44a.appspot.com",
+  messagingSenderId: "685996550789",
+  appId: "1:685996550789:web:423617be32a3e82ada17ec",
+  measurementId: "G-F450V3XZQ0",
 };
 
 // Initialize Firebase
 
 export const app = initializeApp(firebaseConfig);
 export const auth = getAuth(app);
+export const storage = getStorage(app);
+export const database = getDatabase(app);
 
 // const app = initializeApp(firebaseConfig);

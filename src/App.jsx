@@ -13,6 +13,7 @@ import PayTable from "./pages/PayTable";
 import Payment1 from "./pages/payment";
 import Client from "./components/client";
 import Login from "./pages/Login";
+import FileUpload from "./components/FileUpload";
 
 const Layout = () => {
   return (
@@ -37,6 +38,10 @@ const Router = createBrowserRouter([
       {
         path: "/paytable",
         element: <PayTable />,
+      },
+      {
+        path: "/fileupload",
+        element: <FileUpload />,
       },
       {
         path: "/payment",
