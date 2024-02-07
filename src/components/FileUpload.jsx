@@ -1,15 +1,58 @@
 import React from "react";
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { useSelector } from "react-redux";
 import { storage } from "../firebase.config";
 import { ref, getDownloadURL, uploadBytesResumable } from "firebase/storage";
 import { getDatabase, push } from "firebase/database";
+import axios from "axios";
+import { toast, ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const FileUpload = () => {
   const [link, setLink] = useState("");
   const [imgUrl, setImgUrl] = useState(null);
   const [progresspercent, setProgresspercent] = useState(0);
   const user = useSelector((state) => state.nex.UserInfo);
+  const linkRef = useRef("");
+
+  const getData = async (e) => {
+    e.preventDefault();
+    const temp = {
+      link: linkRef.current.value,
+    };
+
+    try {
+      const { link } = temp;
+
+      const response = await axios.post(
+        `https://nexfin-6b44a-default-rtdb.firebaseio.com/Userlink/${user.name}.json`,
+        {
+          link: link,
+        },
+        {
+          headers: {
+            "Content-Type": "application/json",
+          },
+          params: {
+            key: "AIzaSyBzBH8ZYp4nU9zmq8wyRUsg6WdThLihRaE", // Replace with your actual API key
+          },
+        }
+      );
+
+      console.log(response);
+
+      if (response.status === 200) {
+        console.log("Message sent successfully");
+      } else {
+        console.log("Error in sending account");
+      }
+    } catch (error) {
+      console.error("Error:", error);
+      alert("Error in sending account");
+      return;
+    }
+    toast.success("Data sent successfully");
+  };
 
   const handleLinkChange = (e) => {
     setLink(e.target.value);
@@ -108,7 +151,7 @@ const FileUpload = () => {
         </p>
         <form
           className="w-full flex md:flex-row flex-col justify-between md:items-center px-2 gap-1 "
-          onSubmit={handleSubmitlink}
+          onSubmit={getData}
         >
           <div className=" w-[90%] p-2 rounded-xl flex  gap-1 justify-center items-center">
             <label
@@ -123,6 +166,7 @@ const FileUpload = () => {
               type="text"
               name="link"
               value={link}
+              ref={linkRef}
               onChange={handleLinkChange}
               placeholder="Enter your link"
             />
@@ -134,6 +178,18 @@ const FileUpload = () => {
           />
         </form>
       </div>
+      <ToastContainer
+        position="top-center"
+        autoClose={1000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="dark"
+      />
     </div>
   );
 };

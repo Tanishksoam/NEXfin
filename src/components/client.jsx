@@ -3,9 +3,11 @@ import axios from "axios";
 import { useState, useRef } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { useSelector } from "react-redux";
 
 const Client = () => {
   const [state, setState] = useState();
+  const user = useSelector((state) => state.nex.UserInfo);
 
   const nameRef = useRef("");
   const contRef = useRef("");
@@ -48,7 +50,7 @@ const Client = () => {
       const { name, cont, email, account, IFSC, UPI } = temp;
 
       const response = await axios.post(
-        "https://nexfin-6b44a-default-rtdb.firebaseio.com/User.json",
+        `https://nexfin-6b44a-default-rtdb.firebaseio.com/User/${user.name}.json`,
         {
           Name: name,
           contact: cont,
@@ -180,6 +182,18 @@ const Client = () => {
           </button>
         </div>
       </form>
+      <ToastContainer
+        position="top-center"
+        autoClose={1000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="dark"
+      />
     </div>
   );
 };

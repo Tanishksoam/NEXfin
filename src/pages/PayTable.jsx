@@ -3,6 +3,7 @@ import { useState } from "react";
 import axios from "axios";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { useSelector } from "react-redux";
 
 const PayTable = () => {
   const [state, setState] = useState([
@@ -15,11 +16,8 @@ const PayTable = () => {
       reminderDate: "REMINDER DATE",
     },
   ]);
-
-  const [loading, setLoading] = useState(false);
-
+  const user = useSelector((state) => state.nex.UserInfo);
   let count = 0;
-  let time = 0;
   const nameRef = useRef("");
   const contRef = useRef("");
   const emailRef = useRef("");
@@ -57,7 +55,7 @@ const PayTable = () => {
         const { name, cont, email, message, amount, reminderDate } = state[i];
 
         const response = await axios.post(
-          "https://nexfin-6b44a-default-rtdb.firebaseio.com/UserData.json",
+          `https://nexfin-6b44a-default-rtdb.firebaseio.com/UserData/${user.name}.json`,
           {
             Name: name,
             contact: cont,

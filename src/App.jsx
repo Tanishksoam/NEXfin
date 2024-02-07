@@ -10,10 +10,11 @@ import {
 } from "react-router-dom";
 import Footer from "./components/Footer";
 import PayTable from "./pages/PayTable";
-import Payment1 from "./pages/payment";
 import Client from "./components/client";
 import Login from "./pages/Login";
 import FileUpload from "./components/FileUpload";
+import Profile from "./components/dashboard";
+import Pricing from "./components/pricing";
 
 const Layout = () => {
   return (
@@ -44,8 +45,8 @@ const Router = createBrowserRouter([
         element: <FileUpload />,
       },
       {
-        path: "/payment",
-        element: <Payment1 />,
+        path: "/pricing",
+        element: <Pricing />,
       },
       {
         path: "/client",
@@ -54,6 +55,10 @@ const Router = createBrowserRouter([
       {
         path: "/login",
         element: <Login />,
+      },
+      {
+        path: "/dashboard",
+        element: <Profile />,
       },
     ],
   },

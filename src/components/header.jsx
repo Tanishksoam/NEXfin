@@ -18,23 +18,27 @@ const Header = () => {
         </div>
         <div className="md:flex items-center gap-8 font-titleFont md:visible hidden">
           <ul className="flex items-center gap-8 font-titleFont">
-            <li className="text-base font-normal text-black hover:text-sky-700  cursor-pointer duration-100">
-              Home
-            </li>
+            <Link to="/">
+              <li className="text-base font-normal text-black hover:text-sky-700  cursor-pointer duration-100">
+                Home
+              </li>
+            </Link>
             <li className="text-base font-normal text-black hover:text-sky-700  cursor-pointer duration-100">
               Element
             </li>
-            <Link to="/payment">
+            <Link to="/pricing">
               <li className="text-base font-normal text-black hover:text-sky-700  cursor-pointer duration-100">
-                Blog
+                pricing
               </li>
             </Link>
           </ul>
           {user !== null ? (
             <div className="flex items-center gap-8 font-titleFont">
-              <li className="text-base font-normal text-black hover:text-sky-700  cursor-pointer duration-100">
-                {user.name}
-              </li>
+              <Link to="/dashboard">
+                <div className="text-base font-normal border-[1px] text-black hover:bg-sky-700 hover:text-white rounded-3xl p-4  cursor-pointer duration-100">
+                  {user.name}
+                </div>
+              </Link>
             </div>
           ) : (
             <div className=" flex gap-5 justify-center items-center">
