@@ -1,11 +1,14 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useSelector } from "react-redux";
+import { useState } from "react";
+import TableComponent from "./TableContent";
 
 const Profile = () => {
   const user = useSelector((state) => state.nex.UserInfo);
   console.log("user--->", user);
+
   return (
-    <div className="w-screen flex flex-col gap-5 items-center py-8">
+    <div className="w-screen flex flex-col gap-5 items-center pt-8">
       <h1 className=" font-titleFont text-5xl font-semibold">Profile</h1>
       <div className=" xs:w-4/5 w-full flex xs:flex-col items-center justify-center gap-4  px-10">
         <div>
@@ -27,6 +30,8 @@ const Profile = () => {
           </div>
         </div>
       </div>
+      <div className=" flex flex-col gap-5 overflow-scroll"></div>
+      <TableComponent />
     </div>
   );
 };
