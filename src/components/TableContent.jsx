@@ -1,12 +1,13 @@
 import React, { useState, useEffect } from "react";
+import { useSelector } from "react-redux";
 
 const TableComponent = () => {
   const [data, setData] = useState([]);
+  const user = useSelector((state) => state.nex.UserInfo);
 
   useEffect(() => {
     const fetchData = async () => {
-      const url =
-        "https://nexfin-6b44a-default-rtdb.firebaseio.com/UserData/Tanishk%20Soam.json";
+      const url = `https://nexfin-6b44a-default-rtdb.firebaseio.com/UserData/${user.name}.json`;
 
       try {
         const response = await fetch(url);

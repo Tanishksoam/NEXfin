@@ -5,14 +5,13 @@ import TableComponent from "./TableContent";
 
 const Profile = () => {
   const user = useSelector((state) => state.nex.UserInfo);
-  console.log("user--->", user);
 
   return (
     <div className="w-screen flex flex-col gap-5 items-center pt-8">
       <h1 className=" font-titleFont text-5xl font-semibold">Profile</h1>
-      <div className=" xs:w-4/5 w-full flex xs:flex-col items-center justify-center gap-4  px-10">
+      <div className=" w-full flex xs:flex-col items-center justify-center gap-4  px-10">
         <div>
-          <img className=" xs:w-24 w-32 rounded-full" src={user.image} alt="" />
+          <img className="w-32 rounded-full z-50" src={user.image} alt="" />
         </div>
         <div className=" ">
           <div className="flex flex-col gap-4 text-xl">
