@@ -72,7 +72,11 @@ const Login = () => {
             onClick={handleGoogleLogin}
             className=" text-base w-60 h-12 tracking-wide border-[1px] border-gray-400 rounded-md flex items-center justify-center gap-4 hover:border-blue-600 cursor-pointer duration-300"
           >
-            {/* <img className=" w-8" src={google} alt="" /> */}
+            <img
+              className=" w-8"
+              src="https://cdn1.iconfinder.com/data/icons/logos-brands-in-colors/544/Google__G__Logo-512.png"
+              alt=""
+            />
             <span className=" tezt-sm text-gray-900 xs:hidden">
               Sign in with Google
             </span>
