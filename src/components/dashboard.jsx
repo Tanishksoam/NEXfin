@@ -29,7 +29,6 @@ const Profile = () => {
           </div>
         </div>
       </div>
-      <div className=" flex flex-col gap-5 overflow-scroll"></div>
       <TableComponent />
     </div>
   );
