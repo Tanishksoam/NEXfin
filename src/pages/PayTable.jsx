@@ -4,8 +4,10 @@ import axios from "axios";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { useSelector } from "react-redux";
+import { useNavigate } from "react-router-dom";
 
 const PayTable = () => {
+  const navigate = useNavigate();
   const [state, setState] = useState([
     {
       name: "NAME",
@@ -37,8 +39,6 @@ const PayTable = () => {
     const arr = [...state];
     arr.push(temp);
     setState(arr);
-    count += 1;
-    time = 1000;
     nameRef.current.value = "";
     contRef.current.value = "";
     emailRef.current.value = "";
@@ -73,8 +73,6 @@ const PayTable = () => {
             },
           }
         );
-
-        console.log(response);
 
         if (response.status === 200) {
           console.log(`Message sent for element ${i}`);
@@ -188,22 +186,34 @@ const PayTable = () => {
             <span className="input-highlight"></span>
           </div>
         </div>
-        <div className=" w-4/5 flex justify-end gap-5 pb-4">
-          <button
-            onClick={handleOnClick}
-            className="cursor-pointer transition-all bg-sky-700 text-white px-6 py-2 rounded-2xl border-sky-900 border-b-[4px] hover:brightness-110 hover:-translate-y-[1px] hover:border-b-[6px] active:border-b-[2px] active:brightness-90 active:translate-y-[2px]"
-          >
-            Add
-          </button>
-          <button
-            onClick={() => {
-              getData();
-              toast.success(`sending Data, it will take sometime`);
-            }}
-            className="cursor-pointer transition-all bg-sky-700 text-white px-6 py-2 rounded-2xl border-sky-900 border-b-[4px] hover:brightness-110 hover:-translate-y-[1px] hover:border-b-[6px] active:border-b-[2px] active:brightness-90 active:translate-y-[2px]"
-          >
-            Submit
-          </button>
+        <div className=" w-4/5 flex justify-between gap-5 pb-4">
+          <div className=" flex gap-5 pb-4">
+            <button
+              onClick={handleOnClick}
+              className="cursor-pointer transition-all bg-sky-700 text-white px-6 py-2 rounded-2xl border-sky-900 border-b-[4px] hover:brightness-110 hover:-translate-y-[1px] hover:border-b-[6px] active:border-b-[2px] active:brightness-90 active:translate-y-[2px]"
+            >
+              Add
+            </button>
+            <button
+              onClick={() => {
+                getData();
+                toast.success(`sending Data, it will take sometime`);
+              }}
+              className="cursor-pointer transition-all bg-sky-700 text-white px-6 py-2 rounded-2xl border-sky-900 border-b-[4px] hover:brightness-110 hover:-translate-y-[1px] hover:border-b-[6px] active:border-b-[2px] active:brightness-90 active:translate-y-[2px]"
+            >
+              Submit
+            </button>
+          </div>
+          <div>
+            <button
+              onClick={() => {
+                navigate("/dashboard");
+              }}
+              className="cursor-pointer transition-all bg-sky-700 text-white px-6 py-2 rounded-2xl border-sky-900 border-b-[4px] hover:brightness-110 hover:-translate-y-[1px] hover:border-b-[6px] active:border-b-[2px] active:brightness-90 active:translate-y-[2px]"
+            >
+              go to profile
+            </button>
+          </div>
         </div>
         <div className=" flex flex-col gap-5 overflow-scroll">
           {state.map((item) => (

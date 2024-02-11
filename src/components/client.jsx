@@ -4,10 +4,12 @@ import { useState, useRef } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { useSelector } from "react-redux";
+import { useNavigate } from "react-router-dom";
 
 const Client = () => {
   const [state, setState] = useState();
   const user = useSelector((state) => state.nex.UserInfo);
+  const navigate = useNavigate();
 
   const nameRef = useRef("");
   const contRef = useRef("");
@@ -72,16 +74,18 @@ const Client = () => {
       console.log(response);
 
       if (response.status === 200) {
-        console.log("Message sent successfully");
+        toast.success("Data sent successfully");
+        setTimeout(() => {
+          navigate("/#steps");
+        }, 2000);
       } else {
-        console.log("Error in sending account");
+        toast.error("Error in sending account");
       }
     } catch (error) {
       console.error("Error:", error);
-      alert("Error in sending account");
+      toast.error("Error in sending account");
       return;
     }
-    toast.success("Data sent successfully");
   };
 
   return (

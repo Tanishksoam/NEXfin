@@ -3,7 +3,6 @@ import React from "react";
 const Pricing = () => {
   return (
     <div>
-      <Dbs />
       <section class="bg-white ">
         <div class="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
           <div class="mx-auto max-w-screen-md text-center mb-8 lg:mb-12">
