@@ -39,6 +39,7 @@ const Client = () => {
 
   const getData = async (e) => {
     e.preventDefault();
+    toast.success("wait for a moment");
     const temp = {
       name: nameRef.current.value,
       cont: contRef.current.value,
@@ -77,7 +78,7 @@ const Client = () => {
         toast.success("Data sent successfully");
         setTimeout(() => {
           navigate("/#steps");
-        }, 2000);
+        }, 1000);
       } else {
         toast.error("Error in sending account");
       }
@@ -86,6 +87,13 @@ const Client = () => {
       toast.error("Error in sending account");
       return;
     }
+
+    nameRef.current.value = "";
+    contRef.current.value = "";
+    emailRef.current.value = "";
+    accountRef.current.value = "";
+    IFSCRef.current.value = "";
+    upiRef.current.value = "";
   };
 
   return (
@@ -102,6 +110,7 @@ const Client = () => {
               name="name"
               type="text"
               ref={nameRef}
+              required
             />
             <label htmlFor="input-field" className="input-label">
               Account Holder Name
@@ -110,10 +119,11 @@ const Client = () => {
           </div>
           <div className="input-container">
             <input
+              required
               placeholder="AccountNo"
               className="input-field"
               name="AccountNo"
-              type="text"
+              type="number"
               ref={accountRef}
             />
             <label htmlFor="input-field" className="input-label">
@@ -123,6 +133,7 @@ const Client = () => {
           </div>
           <div className="input-container">
             <input
+              required
               placeholder="IFSC"
               className="input-field"
               name="IFSC"
@@ -149,10 +160,11 @@ const Client = () => {
           </div>
           <div className="input-container">
             <input
+              required
               placeholder="Email"
               className="input-field"
               name="Email"
-              type="text"
+              type="email"
               ref={emailRef}
             />
             <label htmlFor="input-field" className="input-label">
@@ -165,7 +177,8 @@ const Client = () => {
               placeholder="Conatct"
               className="input-field"
               name="Conatct"
-              type="text"
+              required
+              type="tel"
               ref={contRef}
             />
             <label htmlFor="input-field" className="input-label">

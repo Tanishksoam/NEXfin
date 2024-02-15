@@ -113,6 +113,7 @@ const PayTable = () => {
               className="input-field"
               name="name"
               type="text"
+              required
               ref={nameRef}
             />
             <label htmlFor="input-field" className="input-label">
@@ -123,10 +124,12 @@ const PayTable = () => {
           <div className="input-container">
             <input
               placeholder="Contact"
-              className="input-field"
+              className="input-field appearance-none"
               name="contact"
-              type="text"
+              type="number"
+              required
               ref={contRef}
+              pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
             />
             <label htmlFor="input-field" className="input-label">
               Contact
@@ -138,7 +141,8 @@ const PayTable = () => {
               name="email"
               placeholder="Email"
               className="input-field"
-              type="text"
+              type="email"
+              required
               ref={emailRef}
             />
             <label htmlFor="input-field" className="input-label">
@@ -164,7 +168,7 @@ const PayTable = () => {
               placeholder="Amount"
               name="amount"
               className="input-field"
-              type="text"
+              type="number"
               ref={amountRef}
             />
             <label htmlFor="input-field" className="input-label">
@@ -177,7 +181,7 @@ const PayTable = () => {
               name="reminderDate"
               placeholder="Reminder Date"
               className="input-field"
-              type="text"
+              type="date"
               ref={reminderDateRef}
             />
             <label htmlFor="input-field" className="input-label">
