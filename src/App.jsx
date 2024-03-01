@@ -18,7 +18,7 @@ import Pricing from "./components/pricing";
 
 const Layout = () => {
   return (
-    <div>
+    <div className="w-screen">
       <Header />
       <ScrollRestoration />
       <Outlet />
@@ -66,7 +66,7 @@ const Router = createBrowserRouter([
 
 const App = () => {
   return (
-    <div className=" font-bodyFont">
+    <div className=" w-screen font-bodyFont">
       <RouterProvider router={Router} />
     </div>
   );

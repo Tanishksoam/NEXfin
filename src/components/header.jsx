@@ -8,7 +8,7 @@ const Header = () => {
 
   return (
     <div className="w-full md:h-20 h-10 bg-white border-b-[1px]  sticky md:top-0 top-6 z-50 px-2">
-      <div className="max-w-screen-xl h-full mx-auto flex items-center justify-between">
+      <div className="max-w-screen h-full mx-auto flex items-center justify-between">
         <div className=" h-20 justify-center items-center">
           <img
             src={logo}
