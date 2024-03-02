@@ -23,23 +23,25 @@ const Steps = () => {
   return (
     <div
       id="steps"
-      className=" w-full flex flex-col gap-16 justify-center items-center py-20"
+      className=" w-full flex flex-col gap-8 md:gap-16 justify-center items-center py-20"
     >
-      <div className=" w-4/5 text-center flex flex-col gap-5">
-        <h1 className=" text-6xl text-gray-800 font-titleFont">
+      <div className=" md:w-4/5 w-full text-center flex flex-col gap-5 px-4">
+        <h1 className=" text-3xl sm:text-4xl md:text-6xl text-gray-800 font-titleFont">
           Follow <span className=" font-semibold">3 simple steps</span>
         </h1>
-        <p className="text-3xl text-gray-500 font-titleFont font-thin">
+        <p className="text-xl sm:text-2xl md:text-3xl text-gray-500 font-titleFont font-thin">
           Start your journey of ease now...
         </p>
       </div>
-      <div className="w-4/5 text-center flex justify-between items-center">
-        <div className=" w-1/2 flex flex-col gap-10">
-          <h2 className=" text-4xl font-titleFont text-gray-800 text-start">
-            <span className=" font-semibold text-5xl">Step 1</span> Enter your
-            bank details{" "}
+      <div className="md:w-4/5 w-full px-4 text-center flex justify-between items-center">
+        <div className=" w-1/2 flex flex-col md:gap-10 gap-4">
+          <h2 className=" text-lg sm:text-2xl md:text-4xl font-titleFont text-gray-800 text-start">
+            <span className=" font-semibold text-xl sm:text-3xl md:text-5xl">
+              Step 1
+            </span>{" "}
+            Enter your bank details{" "}
           </h2>
-          <p className=" text-gray-600 font-bodyFont text-start">
+          <p className=" text-xs sm:text-md  md:text-lg text-gray-600 font-bodyFont text-start">
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cupiditate
             delectus molestiae sunt ex sit id quidem sapiente suscipit
             voluptates soluta natus, veritatis voluptate libero quaerat! Laborum
@@ -48,13 +50,13 @@ const Steps = () => {
           <div className="flex justify-between items-center">
             <button
               onClick={handleClient}
-              className=" w-56 h-10 bg-sky-700 rounded-full text-white flex justify-center items-center text-center px-6"
+              className=" w-32 sm:w-56 h-6 sm:h-10 bg-sky-700 rounded-full text-white flex text-xs sm:text-md md:text-lg justify-center items-center text-center px-6"
             >
               <span>Enter Details</span>
             </button>
           </div>
         </div>
-        <div className=" w-96 h-80 rounded-md overflow-hidden">
+        <div className=" w-96 h-80 flex items-center justify-center rounded-md overflow-hidden">
           <img src={pic2} alt="" />
         </div>
       </div>

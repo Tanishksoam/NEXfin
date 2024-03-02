@@ -14,12 +14,13 @@ const Hero = () => {
             requests in minutes
           </h1>
         </div>
+        
         <div className=" sm:w-1/2 w-full text-center">
           <p className=" sm:text-3xl text-lg font-bodyFont  text-gray-500 font-normal">
             upload your database and set up your account
           </p>
         </div>
-        <div className=" w-1/5 font-bodyFont">
+        <div className=" md:w-1/5 w-3/5 font-bodyFont">
           <a href="#steps">
             <button className=" w-full h-10 bg-sky-700 rounded-full text-white flex justify-between items-center px-8">
               <span>Lets Go...</span>

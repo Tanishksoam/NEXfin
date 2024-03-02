@@ -1,5 +1,5 @@
 import React from "react";
-import { logo } from "../assets/images";
+import { logo, menu } from "../assets/images";
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
 
@@ -14,6 +14,13 @@ const Header = () => {
             src={logo}
             alt=""
             className="sm:w-32 w-20 justify-center items-center"
+          />
+        </div>
+        <div className=" h-20 justify-center items-center">
+          <img
+            src={menu}
+            alt=""
+            className="sm:w-20 w-16 md:hidden justify-center items-center"
           />
         </div>
         <div className="md:flex items-center gap-8 font-titleFont md:visible hidden">
