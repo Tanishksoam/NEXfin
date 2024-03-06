@@ -28,23 +28,22 @@ const TableComponent = () => {
   }, []);
 
   return (
-    <div className=" w-full min-h-[50vh] flex flex-col items-center justify-center gap-4 bg-slate-200 ">
-      <h2 className=" text-3xl font-titleFont font-bold ">User Data Table</h2>
-      <table
-        className=" w-4/5 border-[1px] border-gray-500 rounded-2xl py-4 overflow-hidden"
-        border="3"
-      >
+    <div className=" w-full min-h-[50vh] flex flex-col items-start justify-start gap-4 bg-slate-200 overflow-scroll ">
+      <h2 className=" text-3xl font-titleFont mx-auto text-center font-bold ">
+        User Data Table
+      </h2>
+      <table className=" w-4/5 border-[1px] border-gray-500 rounded-2xl  px-2 overflow-hidden">
         <thead>
-          <tr className=" text-center text-xl bg-sky-700 text-white font-bodyFont overflow-hidden gap-2">
-            <th>Name</th>
-            <th>Amount</th>
-            <th>Contact</th>
-            <th>Email</th>
-            <th>Message</th>
-            <th>Reminder Date</th>
+          <tr className=" text-center text-sm sm:text-md md:text-xl bg-sky-700 text-white px-2 font-bodyFont gap-2 overflow-hidden">
+            <th className="px-2">Name</th>
+            <th className="px-2">Amount</th>
+            <th className="px-2">Contact</th>
+            <th className="px-2">Email</th>
+            <th className="px-2">Message</th>
+            <th className="px-2">Reminder Date</th>
           </tr>
         </thead>
-        <tbody className=" text-center text-lg">
+        <tbody className=" text-center text-xs sm:text-sm md:text-lg px-4">
           {data.map(
             (item, index) => (
               console.log(item),

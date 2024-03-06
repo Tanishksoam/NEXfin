@@ -29,7 +29,6 @@ export default {
         "-apple-system",
         "system-ui",
         "Segoe UI",
-        "Roboto",
         "Helvetica Neue",
         "Arial",
         "Noto Sans",

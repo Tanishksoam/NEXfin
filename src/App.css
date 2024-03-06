@@ -52,3 +52,19 @@
 .input-field:focus+.input-label+.input-highlight {
     width: 100%;
 }
+
+
+@media screen and (max-width: 768px) {
+    .input-container {
+        margin: 10px;
+    }
+
+    .input-field {
+        font-size: 10px;
+        padding-left: 0;
+    }
+
+    .input-label {
+        font-size: 10px;
+    }
+}

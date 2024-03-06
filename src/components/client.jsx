@@ -98,14 +98,14 @@ const Client = () => {
 
   return (
     <div className=" justify-center items-center py-16">
-      <form className="w-2/3 border-2 mx-auto py-12 rounded-3xl">
-        <h1 className=" w-full text-center text-3xl font-titleFont font-semibold pb-2">
+      <form className="sm:w-2/3 w-full px-4 border-2 mx-auto py-8 sm:py-12 rounded-3xl">
+        <h1 className=" w-full text-center text-xl sm:text-2xl md:text-3xl font-titleFont font-semibold pb-2">
           Your Details
         </h1>
-        <div className="grid  grid-cols-2 justify-center items-center gap-y-8 gap-x-4 ">
+        <div className="grid  grid-cols-2 justify-center items-center gap-y-8 gap-x-2 sm:gap-x-4 ">
           <div className="input-container">
             <input
-              placeholder="Name"
+              placeholder="Account Holder Name"
               className="input-field"
               name="name"
               type="text"
@@ -113,7 +113,7 @@ const Client = () => {
               required
             />
             <label htmlFor="input-field" className="input-label">
-              Account Holder Name
+              Name
             </label>
             <span className="input-highlight"></span>
           </div>
@@ -126,7 +126,7 @@ const Client = () => {
               type="number"
               ref={accountRef}
             />
-            <label htmlFor="input-field" className="input-label">
+            <label htmlFor="input-field" className="input-label ">
               Accoun No.
             </label>
             <span className="input-highlight"></span>
@@ -140,7 +140,7 @@ const Client = () => {
               type="text"
               ref={IFSCRef}
             />
-            <label htmlFor="input-field" className="input-label">
+            <label htmlFor="input-field" className="input-label ">
               IFSC Code
             </label>
             <span className="input-highlight"></span>
@@ -153,7 +153,7 @@ const Client = () => {
               type="text"
               ref={upiRef}
             />
-            <label htmlFor="input-field" className="input-label">
+            <label htmlFor="input-field" className="input-label ">
               UPI Id
             </label>
             <span className="input-highlight"></span>
@@ -167,7 +167,7 @@ const Client = () => {
               type="email"
               ref={emailRef}
             />
-            <label htmlFor="input-field" className="input-label">
+            <label htmlFor="input-field" className="input-label ">
               Email
             </label>
             <span className="input-highlight"></span>
@@ -181,7 +181,7 @@ const Client = () => {
               type="tel"
               ref={contRef}
             />
-            <label htmlFor="input-field" className="input-label">
+            <label htmlFor="input-field" className="input-label ">
               Conatct
             </label>
             <span className="input-highlight"></span>

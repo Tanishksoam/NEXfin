@@ -21,95 +21,97 @@ const Steps = () => {
     navigate("/paytable");
   };
   return (
-    <div
-      id="steps"
-      className=" w-full flex flex-col gap-8 md:gap-16 justify-center items-center py-20"
-    >
-      <div className=" md:w-4/5 w-full text-center flex flex-col gap-5 px-4">
-        <h1 className=" text-3xl sm:text-4xl md:text-6xl text-gray-800 font-titleFont">
-          Follow <span className=" font-semibold">3 simple steps</span>
-        </h1>
-        <p className="text-xl sm:text-2xl md:text-3xl text-gray-500 font-titleFont font-thin">
-          Start your journey of ease now...
-        </p>
+    <>
+      <div className="w-full flex items-center justify-center font-titleFont text-2xl">
+        <h1>Follow 3 simple Steps</h1>
       </div>
-      <div className="md:w-4/5 w-full px-4 text-center flex justify-between items-center">
-        <div className=" w-1/2 flex flex-col md:gap-10 gap-4">
-          <h2 className=" text-lg sm:text-2xl md:text-4xl font-titleFont text-gray-800 text-start">
-            <span className=" font-semibold text-xl sm:text-3xl md:text-5xl">
-              Step 1
-            </span>{" "}
-            Enter your bank details{" "}
-          </h2>
-          <p className=" text-xs sm:text-md  md:text-lg text-gray-600 font-bodyFont text-start">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cupiditate
-            delectus molestiae sunt ex sit id quidem sapiente suscipit
-            voluptates soluta natus, veritatis voluptate libero quaerat! Laborum
-            porro iste rem adipisci!
-          </p>
-          <div className="flex justify-between items-center">
+      <div className="w-full h-auto flex  items-center justify-center gap-4 z-5">
+        <div className="w-1/4 h-full flex flex-col justify-center bg-[#9EE96E] gap-2 p-4 rounded-xl border-2 border-b-4 border-r-4 border-gray-500">
+          <div className="flex items-center justify-between">
+            <h4 className="text-lg font-titleFont font-semibold">Step 1 </h4>
+            <h4 className="text-lg font-titleFont font-semibold">:</h4>
+            <h4 className="text-lg font-titleFont font-semibold">
+              Your bank details
+            </h4>
+          </div>
+          <div>
+            <h4 className="text-md font-bodyFont ">
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+              Cupiditate delectus molestiae sunt ex sit id quidem sapiente
+              suscipit voluptates soluta natus, veritatis voluptate libero
+              quaerat! Laborum porro iste rem adipisci!
+            </h4>
+          </div>
+          <div className="w-full h-auto flex  justify-end">
             <button
               onClick={handleClient}
-              className=" w-32 sm:w-56 h-6 sm:h-10 bg-sky-700 rounded-full text-white flex text-xs sm:text-md md:text-lg justify-center items-center text-center px-6"
+              className=" w-auto h-6 sm:h-10 bg-[#74AC50] rounded-full text-white flex text-xs sm:text-sm md:text-md justify-center items-center text-center  px-6"
             >
               <span>Enter Details</span>
             </button>
           </div>
         </div>
-        <div className=" w-96 h-80 flex items-center justify-center rounded-md overflow-hidden">
-          <img src={pic2} alt="" />
-        </div>
-      </div>
-      <div className="w-4/5 text-center flex justify-between items-center">
-        <div className=" w-96 h-80 rounded-md overflow-hidden">
-          <img src={pic4} alt="" />
-        </div>
-        <div className=" w-1/2 flex flex-col gap-10">
-          <h2 className=" text-4xl font-titleFont text-gray-800 text-start">
-            <span className=" font-semibold text-5xl">Step 2</span> Enter
-            customer Details or upload a excel sheet{" "}
-          </h2>
-          <p className=" text-gray-600 font-bodyFont text-start">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cupiditate
-            delectus molestiae sunt ex sit id quidem sapiente suscipit
-            voluptates soluta natus, veritatis voluptate libero quaerat! Laborum
-            porro iste rem adipisci!
-          </p>
-          <div className="flex justify-between items-center">
+        <div className="w-1/4 h-full flex flex-col justify-center bg-[#A3A7F5] gap-2 p-4 rounded-xl border-2 border-b-4 border-r-4 border-gray-500">
+          <div className="flex items-center justify-between">
+            <h4 className="text-lg font-titleFont font-semibold">Step 2 </h4>
+            <h4 className="text-lg font-titleFont font-semibold">:</h4>
+            <h4 className="text-lg font-titleFont font-semibold">
+              Your Client Details
+            </h4>
+          </div>
+          <div>
+            <h4 className="text-md font-bodyFont ">
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+              Cupiditate delectus molestiae sunt ex sit id quidem sapiente
+              suscipit voluptates soluta natus, veritatis voluptate libero
+              quaerat! Laborum porro iste rem adipisci!
+            </h4>
+          </div>
+          <div className="w-full flex  justify-center items-center gap-2">
             <button
               onClick={handleClientBase}
-              className=" w-56 h-10 bg-sky-700 rounded-full text-white flex justify-center items-center text-center"
+              className=" w-auto px-4 h-10 bg-[#6d71b7] sm:text-sm md:text-md text-xs  rounded-full text-white flex justify-center items-center text-center"
             >
-              <span>Enter Details</span>
+              Enter Details
             </button>
-
-            <p className=" text-2xl text-gray-500 font-titleFont"> Or</p>
+            <p className=" text-md sm:text-lg md:text-2xl text-[#6d71b7] font-titleFont">
+              {" "}
+              Or
+            </p>
             <Link to="/fileupload">
-              <button className=" w-56 h-10 bg-sky-700 rounded-full text-white flex justify-center items-center justify-items-center text-center">
+              <button className=" w-auto px-4 h-10 sm:text-sm md:text-md text-xs bg-[#6d71b7] rounded-full text-white flex justify-center items-center justify-items-center text-center">
                 Upload Excel Sheet
               </button>
             </Link>
           </div>
         </div>
-      </div>
-      <div className="w-4/5 text-center flex justify-between items-center">
-        <div className=" w-1/2 flex flex-col gap-10">
-          <h2 className=" text-4xl font-titleFont text-gray-800 text-start">
-            <span className=" font-semibold text-5xl">Step 3</span> Relax and
-            get payments on time{" "}
-          </h2>
-          <p className=" text-gray-600 font-bodyFont text-start">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cupiditate
-            delectus molestiae sunt ex sit id quidem sapiente suscipit
-            voluptates soluta natus, veritatis voluptate libero quaerat! Laborum
-            porro iste rem adipisci!
-          </p>
+        <div className="w-1/4 h-full flex flex-col justify-center bg-zinc-900 text-white gap-2 p-4  rounded-xl border-2 border-b-4 border-r-4 border-gray-500">
+          <div className="flex items-center justify-between">
+            <h4 className="text-lg font-titleFont font-semibold">Step 3 </h4>
+            <h4 className="text-lg font-titleFont font-semibold">:</h4>
+            <h4 className="text-lg font-titleFont font-semibold">
+              Relax and get payments
+            </h4>
+          </div>
+          <div>
+            <h4 className="text-md font-bodyFont ">
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+              Cupiditate delectus molestiae sunt ex sit id quidem sapiente
+              suscipit voluptates soluta natus, veritatis voluptate libero
+              quaerat! Laborum porro iste rem adipisci!
+            </h4>
+          </div>
+          <div className="w-full h-auto flex  justify-end">
+            <button
+              onClick={handleClient}
+              className=" w-auto h-6 sm:h-10 bg-zinc-700 rounded-full text-white flex text-xs sm:text-sm md:text-md justify-center items-center text-center  px-6"
+            >
+              <span></span>
+            </button>
+          </div>
         </div>
-        <div className=" w-96 h-80 rounded-md overflow-hidden">
-          <img src={pic3} alt="" />
-        </div>
       </div>
-    </div>
+    </>
   );
 };
 
