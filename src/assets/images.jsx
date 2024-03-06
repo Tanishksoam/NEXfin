@@ -11,5 +11,6 @@ import activeMsg from "./active-msg.svg";
 import msg from "./msg.svg";
 import activeNotification from "./active-notification.svg";
 import notification from "./notification.svg";  
+import profile from "./profile.svg";
 
-export { logo, pic2, pic3, pic4, pic1, phonepe, menu, graph, calender, activeMsg, msg, activeNotification, notification};
+export { logo, pic2, pic3, pic4, pic1, phonepe, menu, graph, calender, activeMsg, msg, activeNotification, notification, profile};
