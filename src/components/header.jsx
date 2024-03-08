@@ -57,22 +57,28 @@ const Header = () => {
           </ul>
         </div>
       </div>
-      <div className="max-w-screen  h-full mx-auto flex justify-start items-center font-bodyFont  text-gray-400 font-medium  border-b-2 border-gray-400">
-        <h4 className="mb-[-2px] border-gray-400 hover:border-b-2 hover:border-gray-600 hover:text-gray-600 px-4 py-2">
-          Home
-        </h4>
+      <div className="max-w-screen  h-full mx-auto flex justify-start items-center font-bodyFont  text-gray-400 font-semibold  border-b-2 border-gray-400">
+        <Link to="/">
+          <h4 className="mb-[-2px] border-gray-400 hover:border-b-2 hover:border-gray-600 hover:text-gray-600 px-4 py-2">
+            Home
+          </h4>
+        </Link>
         <h4 className=" mb-[-2px] hover:border-b-2 hover:border-gray-600 hover:text-gray-600 px-4 py-2">
           Transactions
         </h4>
-        <h4 className=" mb-[-2px] hover:border-b-2 hover:border-gray-600 hover:text-gray-600 px-4 py-2">
-          Pricing
-        </h4>
+        <Link to="pricing">
+          <h4 className=" mb-[-2px] hover:border-b-2 hover:border-gray-600 hover:text-gray-600 px-4 py-2">
+            Pricing
+          </h4>
+        </Link>
         <h4 className=" mb-[-2px] hover:border-b-2 hover:border-gray-600 hover:text-gray-600 px-4 py-2">
           Demo
         </h4>
-        <h4 className=" mb-[-2px] hover:border-b-2 hover:border-gray-600 hover:text-gray-600 px-4 py-2">
-          Login/Sign Up
-        </h4>
+        <Link to="/login">
+          <h4 className=" mb-[-2px] text-[#7B7BC1] hover:border-b-2 hover:border-[#5a5aa5] hover:text-[#5a5aa5] px-4 py-2">
+            Login/Sign Up
+          </h4>
+        </Link>
       </div>
     </div>
   );

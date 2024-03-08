@@ -22,15 +22,15 @@ const Steps = () => {
   };
   return (
     <>
-      <div className="w-full flex items-center justify-center font-titleFont text-2xl">
+      <div className="w-full flex items-center justify-center font-titleFont font-bold text-lg">
         <h1>Follow 3 simple Steps</h1>
       </div>
       <div className="w-full h-auto flex  items-center justify-center gap-4 z-5">
         <div className="w-1/4 h-full flex flex-col justify-center bg-[#9EE96E] gap-2 p-4 rounded-xl border-2 border-b-4 border-r-4 border-gray-500">
           <div className="flex items-center justify-between">
-            <h4 className="text-lg font-titleFont font-semibold">Step 1 </h4>
-            <h4 className="text-lg font-titleFont font-semibold">:</h4>
-            <h4 className="text-lg font-titleFont font-semibold">
+            <h4 className="text-lg font-titleFont font-bold">Step 1 </h4>
+            <h4 className="text-lg font-titleFont font-bold">:</h4>
+            <h4 className="text-lg font-titleFont font-bold">
               Your bank details
             </h4>
           </div>
@@ -53,9 +53,9 @@ const Steps = () => {
         </div>
         <div className="w-1/4 h-full flex flex-col justify-center bg-[#A3A7F5] gap-2 p-4 rounded-xl border-2 border-b-4 border-r-4 border-gray-500">
           <div className="flex items-center justify-between">
-            <h4 className="text-lg font-titleFont font-semibold">Step 2 </h4>
-            <h4 className="text-lg font-titleFont font-semibold">:</h4>
-            <h4 className="text-lg font-titleFont font-semibold">
+            <h4 className="text-lg font-titleFont font-bold">Step 2 </h4>
+            <h4 className="text-lg font-titleFont font-bold">:</h4>
+            <h4 className="text-lg font-titleFont font-bold">
               Your Client Details
             </h4>
           </div>
@@ -87,9 +87,9 @@ const Steps = () => {
         </div>
         <div className="w-1/4 h-full flex flex-col justify-center bg-zinc-900 text-white gap-2 p-4  rounded-xl border-2 border-b-4 border-r-4 border-gray-500">
           <div className="flex items-center justify-between">
-            <h4 className="text-lg font-titleFont font-semibold">Step 3 </h4>
-            <h4 className="text-lg font-titleFont font-semibold">:</h4>
-            <h4 className="text-lg font-titleFont font-semibold">
+            <h4 className="text-lg font-titleFont font-bold">Step 3 </h4>
+            <h4 className="text-lg font-titleFont font-bold">:</h4>
+            <h4 className="text-lg font-titleFont font-bold">
               Relax and get payments
             </h4>
           </div>

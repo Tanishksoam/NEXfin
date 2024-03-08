@@ -21,7 +21,7 @@ export default {
     },
     fontFamily: {
       titleFont: "Raleway",
-      bodyFont: "Montserrat",
+      bodyFont: "Outfit",
       body: [
         "Inter",
         "ui-sans-serif",

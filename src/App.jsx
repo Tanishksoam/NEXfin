@@ -18,7 +18,7 @@ import Pricing from "./components/pricing";
 
 const Layout = () => {
   return (
-    <div className="w-screen">
+    <div className="w-screen h-screen">
       <Header />
       <ScrollRestoration />
       <Outlet />
