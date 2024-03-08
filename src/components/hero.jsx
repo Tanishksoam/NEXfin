@@ -1,11 +1,43 @@
 import React from "react";
-import { graph } from "../assets/images";
+import { graph, tag } from "../assets/images";
 import Steps from "./steps";
 
 const Hero = () => {
   return (
     <div className=" w-screen h-100vh flex flex-col justify-center gap-6 items-center my-4 z-4 relative ">
-      <div className="w-5/6 bg-zinc-950 relative flex flex-col justify-center items-center gap-8 rounded-3xl p-4 border-zinc-400 border-b-8 border-r-8 z-20">
+      <div className="w-5/6 bg-zinc-950 relative flex flex-col justify-center items-center gap-8 rounded-3xl p-4 border-[#B0B0B0] border-b-8 border-r-8 z-10">
+        <div className="w-36 h-10  bg-[#FAF3E1] border-[1px] border-[#D78E2C] rounded-md absolute z-20 top-[65%] left-[-50px] flex items-center justify-between ">
+          <div className="w-auto h-full pl-2  bg-transparent flex items-center justify-center overflow-hidden ">
+            <img className=" w-10 h-10" src={tag} alt="" />
+          </div>
+          <h1 className="text-black text-sm p-2  font-bodyFont text-center">
+            Test Mode
+          </h1>
+          <div className="w-auto h-full border-l-[1px] p-2  border-[#D78E2C] bg-transparent flex items-center justify-center ">
+            <div className=" w-6 h-6 border-[1px] border-black bg-white rounded-sm flex items-center justify-center ">
+              <h4>0</h4>
+            </div>
+          </div>
+        </div>
+        <div className="w-36 h-10  bg-[#B0B0B0]  rounded-md absolute z-0 top-[69%] left-[-35px] "></div>
+        <div className="w-36 h-10  bg-zinc-950  absolute z-10 top-[69%] left-0 "></div>
+
+        <div className="w-36 h-10  bg-[#FAF3E1] border-[1px] border-[#D78E2C] rounded-md absolute z-20 top-[20%] right-[-50px] flex items-center justify-between ">
+          <div className="w-auto h-full pl-2  bg-transparent flex items-center justify-center overflow-hidden ">
+            <img className=" w-10 h-10" src={tag} alt="" />
+          </div>
+          <h1 className="text-black text-sm p-2  font-bodyFont text-center">
+            Test Mode
+          </h1>
+          <div className="w-auto h-full border-l-[1px] p-2  border-[#D78E2C] bg-transparent flex items-center justify-center ">
+            <div className=" w-6 h-6 border-[1px] border-black bg-white rounded-sm flex items-center justify-center ">
+              <h4>0</h4>
+            </div>
+          </div>
+        </div>
+        <div className="w-36 h-10  bg-[#B0B0B0]  rounded-md absolute z-0 top-[23%] right-[-65px] "></div>
+        <div className="w-36 h-10  bg-zinc-950  absolute z-10 top-[23%] right-0 "></div>
+
         <div className=" w-full flex justify-between items-center">
           <div className=" w-auto text-white text-left">
             <h1 className="text-3xl text-[#9BE36D] font-bold font-bodyFont">

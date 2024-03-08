@@ -16,8 +16,8 @@ const Header = () => {
 
   return (
     <div className="w-full  bg-white  sticky top-0 z-50 px-10">
-      <div className="max-w-screen h-full mx-auto flex items-center justify-between">
-        <div className=" h-20 justify-center items-center">
+      <div className="max-w-screen h-16 flex items-center justify-between">
+        <div className=" h-10 flex justify-center items-center">
           <Link to="/">
             <img
               src={logo}
@@ -33,8 +33,8 @@ const Header = () => {
             className="sm:w-20 w-16 md:hidden justify-center items-center"
           />
         </div>
-        <div className="md:flex items-center gap-8 font-titleFont md:visible hidden">
-          <ul className="flex items-center gap-8 font-titleFont mt-4">
+        <div className="md:flex items-center justify-center gap-8 font-titleFont  hidden">
+          <ul className="flex justify-center items-center gap-8 font-titleFont ">
             <Header_button sorc={calender} />
             <Header_button sorc={activeNotification} />
             <Header_button sorc={activeMsg} />
@@ -42,12 +42,16 @@ const Header = () => {
             {user !== null ? (
               <div className="flex items-center gap-8 font-titleFont">
                 <Link to="/dashboard">
-                  <Header_button sorc={user.image} />
+                  <li className=" w-10 h-10 border-2 border-[#525152] border-b-4 rounded-full flex items-center justify-center overflow-hidden ">
+                    <img className=" w-[100%] h-auto" src={user.image} alt="" />
+                  </li>
                 </Link>
               </div>
             ) : (
               <Link to="/login">
-                <Header_button sorc={profile} />
+                <li className=" w-10 h-10 border-2 border-[#525152] border-b-4 rounded-full flex items-center justify-center overflow-hidden ">
+                  <img className=" w-[100%] h-auto" src={profile} alt="" />
+                </li>
               </Link>
             )}
           </ul>
