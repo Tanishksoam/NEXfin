@@ -8,6 +8,15 @@ app.use(cors());
 const phonepeRouter = require("./routes/phonepe");
 app.use("/api/phonepe", phonepeRouter);
 
+let visitorCount = 0;
+
+app.get("/api/visitor-count", (req, res) => {
+  // Increment the visitor count on each request
+  visitorCount++;
+
+  res.json({ visitorCount });
+});
+
 app.listen(port, () => {
   console.log(`Example app listening at ${port}`);
 });

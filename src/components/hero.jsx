@@ -1,6 +1,7 @@
 import React from "react";
 import { graph, tag } from "../assets/images";
 import Steps from "./steps";
+import VisitorCounter from "./visitorcount";
 
 const Hero = () => {
   return (
@@ -40,9 +41,7 @@ const Hero = () => {
 
         <div className=" w-full flex justify-between items-center">
           <div className=" w-auto text-white text-left">
-            <h1 className="text-3xl text-[#9BE36D] font-bold font-bodyFont">
-              192
-            </h1>
+            <VisitorCounter />
             <h6>Inflow Today</h6>
           </div>
           <div className="w-auto  grid grid-cols-3 grid-flow-row relative">
