@@ -2,12 +2,12 @@ import React from "react";
 import { graph, tag } from "../assets/images";
 import Steps from "./steps";
 import VisitorCounter from "./visitorcount";
-import BarChart from "./heroChart";
+import BarChart from "./chartLine";
 
 const Hero = () => {
   return (
     <div className=" w-screen flex flex-col justify-center gap-2 items-center z-4 relative  overflow-scroll">
-      <div className="w-5/6 bg-zinc-950 relative flex flex-col justify-center items-center gap-8 rounded-3xl mt-4 p-4 border-[#B0B0B0] border-b-8 border-r-8 z-10">
+      <div className="w-5/6 bg-zinc-950 relative flex flex-col justify-center items-center gap-4 rounded-3xl mt-4 p-4 border-[#B0B0B0] border-b-8 border-r-8 z-10">
         <div className="w-36 h-10  bg-[#FAF3E1] border-[1px] border-[#D78E2C] rounded-md absolute z-20 top-[65%] left-[-50px] flex items-center justify-between ">
           <div className="w-auto h-full pl-2  bg-transparent flex items-center justify-center overflow-hidden ">
             <img className=" w-10 h-10" src={tag} alt="" />
