@@ -3,6 +3,8 @@ import { graph, tag } from "../assets/images";
 import Steps from "./steps";
 import VisitorCounter from "./visitorcount";
 
+
+
 const Hero = () => {
   return (
     <div className=" w-screen flex flex-col justify-center gap-2 items-center z-4 relative  overflow-scroll">
