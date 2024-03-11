@@ -2,7 +2,7 @@ import React from "react";
 import { graph, tag } from "../assets/images";
 import Steps from "./steps";
 import VisitorCounter from "./visitorcount";
-import HeroChart from "./heroChart";
+import BarChart from "./heroChart";
 
 const Hero = () => {
   return (
@@ -67,7 +67,7 @@ const Hero = () => {
           </div>
         </div>
         <div className="w-full flex justify-center items-center z-50">
-          <HeroChart />
+          <BarChart />
         </div>
         <div className="w-24 h-10 flex items-center justify-center">
           <button className=" w-full flex flex-row justify-between  items-center p-2 rounded-xl text-white bg-[#9E9ED7] border-[1px] border-b-4 border-r-4 border-[#525152]">

@@ -38,7 +38,7 @@ const VisitorCounter = () => {
 
     fetchVisitorCount();
 
-    animateValue("value", 0, visitorCount + 50, 2000);
+    animateValue("value", 0, visitorCount + 128, 2000);
   }, []);
 
   return (
