@@ -5,9 +5,6 @@ const cors = require("cors");
 app.use(express.json());
 app.use(cors());
 
-const phonepeRouter = require("./routes/phonepe");
-app.use("/api/phonepe", phonepeRouter);
-
 let visitorCount = 0;
 
 app.get("/api/visitor-count", (req, res) => {

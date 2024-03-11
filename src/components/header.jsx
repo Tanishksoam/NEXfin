@@ -16,7 +16,7 @@ const Header = () => {
 
   return (
     <div className="w-full  bg-white  sticky top-0 z-50 px-10">
-      <div className="max-w-screen h-16 flex items-center justify-between">
+      <div className="max-w-screen h-8 flex items-center justify-between mt-4">
         <div className=" h-10 flex justify-center items-center">
           <Link to="/">
             <img

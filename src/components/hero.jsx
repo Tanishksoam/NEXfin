@@ -2,8 +2,7 @@ import React from "react";
 import { graph, tag } from "../assets/images";
 import Steps from "./steps";
 import VisitorCounter from "./visitorcount";
-
-
+import HeroChart from "./heroChart";
 
 const Hero = () => {
   return (
@@ -47,18 +46,18 @@ const Hero = () => {
             <h6>Inflow Today</h6>
           </div>
           <div className="w-auto  grid grid-cols-3 grid-flow-row relative">
-            <h1 className="text-3xl text-right text-white font-bold font-bodyFont">
+            <h1 className="text-5xl text-right text-white font-bold font-bodyFont">
               Automated
             </h1>
-            <h1 className="text-3xl text-left pl-2 text-white font-bold font-bodyFont">
+            <h1 className="text-5xl text-left pl-2 text-white font-bold font-bodyFont">
               <span className="text-[#9BE36D]">Payments</span>
             </h1>
-            <h1 className="text-3xl text-center text-white font-bold font-bodyFont"></h1>
-            <h1 className="text-3xl text-left pl-2 text-white font-bold font-bodyFont"></h1>
-            <h1 className="text-3xl text-right text-[#9E9ED7] font-bold font-bodyFont">
+            <h1 className="text-5xl text-center text-white font-bold font-bodyFont"></h1>
+            <h1 className="text-5xl text-left pl-2 text-white font-bold font-bodyFont"></h1>
+            <h1 className="text-5xl text-right text-[#9E9ED7] font-bold font-bodyFont">
               Autonomous
             </h1>
-            <h1 className="text-3xl text-left pl-2 text-white font-bold font-bodyFont ">
+            <h1 className="text-5xl text-left pl-2 text-white font-bold font-bodyFont ">
               Life
             </h1>
           </div>
@@ -67,8 +66,8 @@ const Hero = () => {
             <div className="w-4 h-4 rounded-full bg-[#A3A7F5] absolute z-10  top-[-30px] left-[-70px]"></div>
           </div>
         </div>
-        <div className="w-full flex justify-center items-center">
-          <img src={graph} alt="" />
+        <div className="w-full flex justify-center items-center z-50">
+          <HeroChart />
         </div>
         <div className="w-24 h-10 flex items-center justify-center">
           <button className=" w-full flex flex-row justify-between  items-center p-2 rounded-xl text-white bg-[#9E9ED7] border-[1px] border-b-4 border-r-4 border-[#525152]">
