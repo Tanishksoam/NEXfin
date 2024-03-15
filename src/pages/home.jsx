@@ -1,11 +1,12 @@
 import React from "react";
 
 import Hero from "../components/hero";
-import Steps from "../components/steps";
+import Header from "../components/header";
 
 const Home = () => {
   return (
     <div>
+      <Header />
       <Hero />
     </div>
   );

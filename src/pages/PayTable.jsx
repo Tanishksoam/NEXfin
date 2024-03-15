@@ -99,165 +99,170 @@ const PayTable = () => {
   };
 
   return (
-    <div className="w-full flex flex-col justify-center items-center">
-      <div className=" w-4/5 text-center py-16">
-        <h1 className=" text-6xl text-gray-800 font-titleFont ">
-          Enter details of your Customers
-        </h1>
+    <>
+      <div className=" w-screen h-screen bg-zinc-950 flex justify-center items-center">
+        <div className=" w-full h-full bg-[#A3A7F5]"></div>
       </div>
-      <>
-        <div id="inputs" className=" w-4/5 grid grid-cols-3 col-span-5">
-          <div className="input-container">
-            <input
-              placeholder="Name"
-              className="input-field"
-              name="name"
-              type="text"
-              required
-              ref={nameRef}
-            />
-            <label htmlFor="input-field" className="input-label">
-              Name
-            </label>
-            <span className="input-highlight"></span>
-          </div>
-          <div className="input-container">
-            <input
-              placeholder="Contact"
-              className="input-field appearance-none"
-              name="contact"
-              type="number"
-              required
-              ref={contRef}
-              pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
-            />
-            <label htmlFor="input-field" className="input-label">
-              Contact
-            </label>
-            <span className="input-highlight"></span>
-          </div>
-          <div className="input-container">
-            <input
-              name="email"
-              placeholder="Email"
-              className="input-field"
-              type="email"
-              required
-              ref={emailRef}
-            />
-            <label htmlFor="input-field" className="input-label">
-              Email
-            </label>
-            <span className="input-highlight"></span>
-          </div>
-          <div className="input-container">
-            <input
-              placeholder="Message (optional)"
-              name="message"
-              className="input-field"
-              type="text"
-              ref={messageRef}
-            />
-            <label htmlFor="input-field" className="input-label">
-              Message
-            </label>
-            <span className="input-highlight"></span>
-          </div>
-          <div className="input-container">
-            <input
-              placeholder="Amount"
-              name="amount"
-              className="input-field"
-              type="number"
-              ref={amountRef}
-            />
-            <label htmlFor="input-field" className="input-label">
-              Amount
-            </label>
-            <span className="input-highlight"></span>
-          </div>
-          <div className="input-container">
-            <input
-              name="reminderDate"
-              placeholder="Reminder Date"
-              className="input-field"
-              type="date"
-              ref={reminderDateRef}
-            />
-            <label htmlFor="input-field" className="input-label">
-              Reminder Date
-            </label>
-            <span className="input-highlight"></span>
-          </div>
+      <div className="w-full flex flex-col justify-center items-center">
+        <div className=" w-4/5 text-center py-16">
+          <h1 className=" text-6xl text-gray-800 font-titleFont ">
+            Enter details of your Customers
+          </h1>
         </div>
-        <div className=" w-4/5 flex justify-between gap-5 pb-4">
-          <div className=" flex gap-5 pb-4">
-            <button
-              onClick={handleOnClick}
-              className="cursor-pointer transition-all bg-sky-700 text-white px-6 py-2 rounded-2xl border-sky-900 border-b-[4px] hover:brightness-110 hover:-translate-y-[1px] hover:border-b-[6px] active:border-b-[2px] active:brightness-90 active:translate-y-[2px]"
-            >
-              Add
-            </button>
-            <button
-              onClick={() => {
-                getData();
-                toast.success(`sending Data, it will take sometime`);
-              }}
-              className="cursor-pointer transition-all bg-sky-700 text-white px-6 py-2 rounded-2xl border-sky-900 border-b-[4px] hover:brightness-110 hover:-translate-y-[1px] hover:border-b-[6px] active:border-b-[2px] active:brightness-90 active:translate-y-[2px]"
-            >
-              Submit
-            </button>
-          </div>
-          <div>
-            <button
-              onClick={() => {
-                navigate("/dashboard");
-              }}
-              className="cursor-pointer transition-all bg-sky-700 text-white px-6 py-2 rounded-2xl border-sky-900 border-b-[4px] hover:brightness-110 hover:-translate-y-[1px] hover:border-b-[6px] active:border-b-[2px] active:brightness-90 active:translate-y-[2px]"
-            >
-              go to profile
-            </button>
-          </div>
-        </div>
-        <div className=" flex flex-col gap-5 overflow-scroll">
-          {state.map((item) => (
-            <div className=" flex flex-row gap-10">
-              <div className=" w-48 h-11 flex bg-slate-200 rounded-full items-center justify-center text-center  ">
-                <h1>{item.name}</h1>
-              </div>
-              <div className=" w-48 h-11 flex bg-slate-200 rounded-full items-center justify-center text-center  ">
-                <h1>{item.cont}</h1>
-              </div>
-              <div className=" w-48 h-11 flex bg-slate-200 rounded-full items-center justify-center text-center  ">
-                <h1>{item.email}</h1>
-              </div>
-              <div className=" w-48 h-11 flex bg-slate-200 rounded-full items-center justify-center text-center  ">
-                <h1>{item.message}</h1>
-              </div>
-              <div className=" w-48 h-11 flex bg-slate-200 rounded-full items-center justify-center text-center  ">
-                <h1>{item.amount}</h1>
-              </div>
-              <div className=" w-48 h-11 flex bg-slate-200 rounded-full items-center justify-center text-center  ">
-                <h1>{item.reminderDate}</h1>
-              </div>
+        <>
+          <div id="inputs" className=" w-4/5 grid grid-cols-3 col-span-5">
+            <div className="input-container">
+              <input
+                placeholder="Name"
+                className="input-field"
+                name="name"
+                type="text"
+                required
+                ref={nameRef}
+              />
+              <label htmlFor="input-field" className="input-label">
+                Name
+              </label>
+              <span className="input-highlight"></span>
             </div>
-          ))}
-        </div>
-      </>
-      ;
-      <ToastContainer
-        position="top-center"
-        autoClose={1000}
-        hideProgressBar={false}
-        newestOnTop={false}
-        closeOnClick
-        rtl={false}
-        pauseOnFocusLoss
-        draggable
-        pauseOnHover
-        theme="dark"
-      />
-    </div>
+            <div className="input-container">
+              <input
+                placeholder="Contact"
+                className="input-field appearance-none"
+                name="contact"
+                type="number"
+                required
+                ref={contRef}
+                pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+              />
+              <label htmlFor="input-field" className="input-label">
+                Contact
+              </label>
+              <span className="input-highlight"></span>
+            </div>
+            <div className="input-container">
+              <input
+                name="email"
+                placeholder="Email"
+                className="input-field"
+                type="email"
+                required
+                ref={emailRef}
+              />
+              <label htmlFor="input-field" className="input-label">
+                Email
+              </label>
+              <span className="input-highlight"></span>
+            </div>
+            <div className="input-container">
+              <input
+                placeholder="Message (optional)"
+                name="message"
+                className="input-field"
+                type="text"
+                ref={messageRef}
+              />
+              <label htmlFor="input-field" className="input-label">
+                Message
+              </label>
+              <span className="input-highlight"></span>
+            </div>
+            <div className="input-container">
+              <input
+                placeholder="Amount"
+                name="amount"
+                className="input-field"
+                type="number"
+                ref={amountRef}
+              />
+              <label htmlFor="input-field" className="input-label">
+                Amount
+              </label>
+              <span className="input-highlight"></span>
+            </div>
+            <div className="input-container">
+              <input
+                name="reminderDate"
+                placeholder="Reminder Date"
+                className="input-field"
+                type="date"
+                ref={reminderDateRef}
+              />
+              <label htmlFor="input-field" className="input-label">
+                Reminder Date
+              </label>
+              <span className="input-highlight"></span>
+            </div>
+          </div>
+          <div className=" w-4/5 flex justify-between gap-5 pb-4">
+            <div className=" flex gap-5 pb-4">
+              <button
+                onClick={handleOnClick}
+                className="cursor-pointer transition-all bg-sky-700 text-white px-6 py-2 rounded-2xl border-sky-900 border-b-[4px] hover:brightness-110 hover:-translate-y-[1px] hover:border-b-[6px] active:border-b-[2px] active:brightness-90 active:translate-y-[2px]"
+              >
+                Add
+              </button>
+              <button
+                onClick={() => {
+                  getData();
+                  toast.success(`sending Data, it will take sometime`);
+                }}
+                className="cursor-pointer transition-all bg-sky-700 text-white px-6 py-2 rounded-2xl border-sky-900 border-b-[4px] hover:brightness-110 hover:-translate-y-[1px] hover:border-b-[6px] active:border-b-[2px] active:brightness-90 active:translate-y-[2px]"
+              >
+                Submit
+              </button>
+            </div>
+            <div>
+              <button
+                onClick={() => {
+                  navigate("/dashboard");
+                }}
+                className="cursor-pointer transition-all bg-sky-700 text-white px-6 py-2 rounded-2xl border-sky-900 border-b-[4px] hover:brightness-110 hover:-translate-y-[1px] hover:border-b-[6px] active:border-b-[2px] active:brightness-90 active:translate-y-[2px]"
+              >
+                go to profile
+              </button>
+            </div>
+          </div>
+          <div className=" flex flex-col gap-5 overflow-scroll">
+            {state.map((item) => (
+              <div className=" flex flex-row gap-10">
+                <div className=" w-48 h-11 flex bg-slate-200 rounded-full items-center justify-center text-center  ">
+                  <h1>{item.name}</h1>
+                </div>
+                <div className=" w-48 h-11 flex bg-slate-200 rounded-full items-center justify-center text-center  ">
+                  <h1>{item.cont}</h1>
+                </div>
+                <div className=" w-48 h-11 flex bg-slate-200 rounded-full items-center justify-center text-center  ">
+                  <h1>{item.email}</h1>
+                </div>
+                <div className=" w-48 h-11 flex bg-slate-200 rounded-full items-center justify-center text-center  ">
+                  <h1>{item.message}</h1>
+                </div>
+                <div className=" w-48 h-11 flex bg-slate-200 rounded-full items-center justify-center text-center  ">
+                  <h1>{item.amount}</h1>
+                </div>
+                <div className=" w-48 h-11 flex bg-slate-200 rounded-full items-center justify-center text-center  ">
+                  <h1>{item.reminderDate}</h1>
+                </div>
+              </div>
+            ))}
+          </div>
+        </>
+        ;
+        <ToastContainer
+          position="top-center"
+          autoClose={1000}
+          hideProgressBar={false}
+          newestOnTop={false}
+          closeOnClick
+          rtl={false}
+          pauseOnFocusLoss
+          draggable
+          pauseOnHover
+          theme="dark"
+        />
+      </div>
+    </>
   );
 };
 

@@ -5,7 +5,7 @@
 /* Input container */
 .input-container {
     position: relative;
-    margin: 20px;
+    margin: 0px;
 }
 
 /* Input field */
@@ -23,7 +23,7 @@
 /* Input label */
 .input-label {
     position: absolute;
-    top: 0;
+    top: -20;
     left: 0;
     font-size: 16px;
     color: rgba(204, 204, 204, 0);
@@ -39,7 +39,7 @@
     height: 2px;
     width: 0;
     background-color: #007bff;
-    transition: all 0.3s ease;
+    /* transition: all 0.3s ease; */
 }
 
 /* Input field:focus styles */

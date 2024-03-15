@@ -1,5 +1,5 @@
 import React from "react";
-import { graph, tag } from "../assets/images";
+import { tag } from "../assets/images";
 import Steps from "./steps";
 import VisitorCounter from "./visitorcount";
 import BarChart from "./chartLine";
@@ -69,7 +69,7 @@ const Hero = () => {
         <div className="w-full flex justify-center items-center z-50">
           <BarChart />
         </div>
-        <div className="w-24 h-10 flex items-center justify-center">
+        <div className="w-32 h-10 flex items-center justify-center">
           <button className=" w-full flex flex-row justify-between  items-center p-2 rounded-xl text-white bg-[#9E9ED7] border-[1px] border-b-4 border-r-4 border-[#525152]">
             <h4>Lets go</h4>
             <h4>{`>`}</h4>

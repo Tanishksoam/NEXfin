@@ -1,5 +1,5 @@
 import React from "react";
-import { pic1, pic2, pic3, pic4 } from "../assets/images";
+
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
