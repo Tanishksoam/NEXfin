@@ -9,6 +9,7 @@ import notification from "./notification.svg";
 import profile from "./profile.svg";
 import tag from "./tag.svg";
 import quote from "./quote.svg";
+import plus from "./plus.svg";
 
 export {
   logo,
@@ -22,4 +23,5 @@ export {
   profile,
   tag,
   quote,
+  plus,
 };
