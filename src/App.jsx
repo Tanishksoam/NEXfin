@@ -15,6 +15,7 @@ import Login from "./pages/Login";
 import FileUpload from "./components/FileUpload";
 import Profile from "./components/dashboard";
 import Pricing from "./components/pricing";
+import SignUP from "./pages/Signup";
 
 const Layout = () => {
   return (
@@ -57,6 +58,10 @@ const Router = createBrowserRouter([
         element: <Login />,
       },
       {
+        path: "/signup",
+        element: <SignUP />,
+      },
+      {
         path: "/dashboard",
         element: <Profile />,
       },
@@ -72,14 +77,4 @@ const App = () => {
   );
 };
 
-// const App = () => {
-//   return (
-//     <div>
-//       <Header />
-//       {/* <Home /> */}
-//       <PayTable />
-//       <Footer />
-//     </div>
-//   );
-// };
 export default App;

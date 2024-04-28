@@ -13,7 +13,7 @@ import {
   signOut,
 } from "firebase/auth";
 
-const Login = () => {
+const SignUP = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const provider = new GoogleAuthProvider();
@@ -66,7 +66,7 @@ const Login = () => {
         <div className="xs:w-3/4 min-w-[480px] w-fit h-full bg-zinc-950 flex flex-col items-center justify-center gap-10 px-6 py-14 rounded-3xl ">
           <div className="w-full flex items-center justify-center gap-10">
             <h1 className=" font-bodyFont font-semibold  text-white text-4xl">
-              Login
+              Create a New Account
             </h1>
           </div>
           <div className="w-full flex flex-col items-center justify-center gap-6">
@@ -119,9 +119,9 @@ const Login = () => {
             <div className="w-[75%] flex items-center justify-center text-white">
               <h4>
                 {" "}
-                Don't have a account?{" "}
-                <Link to="/signup">
-                  <span className="text-blue-500">Signup</span>
+                Already have a account?{" "}
+                <Link to="/login">
+                  <span className="text-blue-500">Login</span>
                 </Link>
               </h4>
             </div>
@@ -144,4 +144,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default SignUP;
