@@ -118,32 +118,95 @@ const PayTable = () => {
                 </tr>
               </thead>
               <Scrollbars style={{ width: "100%", height: "40vh" }}>
-                <tbody className="flex flex-col gap-2">
-                  {state.map((item, index) => (
-                    <tr
-                      key={index}
-                      className="flex w-full h-6 text-left text-xs sm:text-sm md:text-md bg-transparent text-[#333333] font-titleFont overflow-hidden"
-                    >
-                      <td className="w-64 h-6 flex bg-white items-center justify-center text-left">
-                        {item.name}
-                      </td>
-                      <td className="w-32 h-6 flex bg-white items-center justify-center text-left">
-                        {item.amount}
-                      </td>
-                      <td className="w-32 h-6 flex bg-white items-center justify-center text-left">
-                        {item.cont}
-                      </td>
-                      <td className="w-64 h-6 flex bg-white items-center justify-center text-left">
-                        {item.email}
-                      </td>
-                      <td className="w-32 h-6 flex bg-white items-center justify-center text-left">
-                        {item.reminderDate}
-                      </td>
-                      <td className="w-64 h-6 flex bg-white items-center justify-center text-left">
-                        {item.message}
-                      </td>
-                    </tr>
-                  ))}
+                <tbody className=" flex flex-col gap-2 max-h-[50vh]">
+                  <tr className=" flex  text-left text-xs sm:text-sm md:text-md bg-transparent text-[#333333] font-titleFont overflow-hidden">
+                    <td className=" w-64 h-6 flex bg-white items-center justify-center text-left  ">
+                      <input
+                        className="w-full focus:bg-slate-200 px-2 "
+                        placeholder="Name"
+                        name="name"
+                        type="text"
+                        required
+                        ref={nameRef}
+                      />
+                    </td>
+                    <td className=" w-32 h-6 flex bg-white items-center justify-center text-left  ">
+                      <input
+                        className="w-full focus:bg-slate-200 px-2 "
+                        placeholder="Amount"
+                        name="amount"
+                        type="number"
+                        ref={amountRef}
+                        required
+                      />
+                    </td>
+                    <td className=" w-32 h-6 flex bg-white items-center justify-center text-left  ">
+                      <input
+                        className="w-full focus:bg-slate-200 px-2 "
+                        placeholder="Contact"
+                        name="contact"
+                        type="number"
+                        required
+                        ref={contRef}
+                      />
+                    </td>
+                    <td className=" w-64 h-6 flex bg-white items-center justify-center text-left  ">
+                      <input
+                        className="w-full focus:bg-slate-200 px-2 "
+                        name="email"
+                        placeholder="Email"
+                        type="email"
+                        required
+                        ref={emailRef}
+                      />
+                    </td>
+                    <td className=" w-32 h-6 flex bg-white items-center justify-center text-left  ">
+                      <input
+                        className="w-full focus:bg-slate-200 px-2 "
+                        name="reminderDate"
+                        placeholder="Reminder Date"
+                        type="date"
+                        ref={reminderDateRef}
+                        required
+                      />
+                    </td>
+                    <td className=" w-64 h-6 flex bg-white items-center justify-center text-left  ">
+                      <input
+                        className="w-full focus:bg-slate-200 px-2 "
+                        placeholder="Message (optional)"
+                        name="message"
+                        type="text"
+                        ref={messageRef}
+                      />
+                    </td>
+                  </tr>
+                  <div className="flex flex-col gap-2 max-h-[40vh] overflow-scroll">
+                    {state.map((item, index) => (
+                      <tr
+                        key={index}
+                        className="flex w-full h-6 text-left text-xs sm:text-sm md:text-md bg-transparent text-[#333333] font-titleFont overflow-hidden"
+                      >
+                        <td className="w-64 h-6 flex bg-white items-center justify-center text-left">
+                          {item.name}
+                        </td>
+                        <td className="w-32 h-6 flex bg-white items-center justify-center text-left">
+                          {item.amount}
+                        </td>
+                        <td className="w-32 h-6 flex bg-white items-center justify-center text-left">
+                          {item.cont}
+                        </td>
+                        <td className="w-64 h-6 flex bg-white items-center justify-center text-left">
+                          {item.email}
+                        </td>
+                        <td className="w-32 h-6 flex bg-white items-center justify-center text-left">
+                          {item.reminderDate}
+                        </td>
+                        <td className="w-64 h-6 flex bg-white items-center justify-center text-left">
+                          {item.message}
+                        </td>
+                      </tr>
+                    ))}
+                  </div>
                 </tbody>
               </Scrollbars>
             </table>

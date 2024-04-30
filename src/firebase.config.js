@@ -8,6 +8,7 @@ import { getAuth } from "firebase/auth";
 import { getStorage } from "firebase/storage";
 import { getDatabase } from "firebase/database";
 import { getPerformance } from "firebase/performance";
+import { createUserWithEmailAndPassword } from "firebase/auth";
 // Your web app's Firebase configuration
 const firebaseConfig = {
   apiKey: "AIzaSyBzBH8ZYp4nU9zmq8wyRUsg6WdThLihRaE",
@@ -27,4 +28,5 @@ const perf = getPerformance(app);
 export const auth = getAuth(app);
 export const storage = getStorage(app);
 export const database = getDatabase(app);
+export const createUser = createUserWithEmailAndPassword;
 // const app = initializeApp(firebaseConfig);

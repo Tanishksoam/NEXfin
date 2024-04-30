@@ -6,14 +6,17 @@ import { Link } from "react-router-dom";
 
 const Menu = () => {
   const [menuDisplay, setMenuDisplay] = useState(true);
-  onclick = () => {
-    setMenuDisplay(!menuDisplay);
-  };
 
   return (
     <>
-      <div className=" w-12 h-12 bg-slate-50 rounded-full flex justify-center items-center mt-4">
-        <img onClick={() => onclick} src={menu} alt="" className=" w-8 h-8 " />
+      <div
+        className=" w-12 h-12 bg-slate-50 rounded-full flex justify-center items-center mt-4"
+        onClick={() => {
+          console.log("clicked");
+          setMenuDisplay(!menuDisplay);
+        }}
+      >
+        <img src={menu} alt="" className=" w-8 h-8 " />
       </div>
       {menuDisplay && (
         <div className=" h-full w-full flex justify-start items-center px-4 relative">
