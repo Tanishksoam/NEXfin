@@ -23,6 +23,8 @@ const SignUP = () => {
 
   const emailRef = useRef("");
   const passwordRef = useRef("");
+  const firstRef = useRef("");
+  const lastRef = useRef("");
   const randomString = () => {
     let result = "";
     while (result.length < 31) {
@@ -34,6 +36,9 @@ const SignUP = () => {
   const handleSignUp = () => {
     const email = emailRef.current.value;
     const password = passwordRef.current.value;
+    const first = firstRef.current.value;
+    const last = lastRef.current.value;
+
     const id = randomString();
     alert(id);
     createUserWithEmailAndPassword(auth, email, password)
@@ -44,7 +49,7 @@ const SignUP = () => {
         dispatch(
           addUser({
             _id: id,
-            name: user.displayName,
+            name: first + " " + last,
             email: email,
             image:
               "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdchCGzgNw_aTi_Rzqn6v867Eu1Jyy2xEe9W6qH0Qq9w&s",
@@ -123,7 +128,7 @@ const SignUP = () => {
                 <input
                   placeholder="First Name"
                   id="firstName"
-                  ref={emailRef}
+                  ref={firstRef}
                   type="text"
                   className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
                 />
@@ -135,7 +140,7 @@ const SignUP = () => {
                 <input
                   placeholder="Last name"
                   id="lastName"
-                  ref={emailRef}
+                  ref={lastRef}
                   type="text"
                   className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
                 />

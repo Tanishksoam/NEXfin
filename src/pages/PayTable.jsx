@@ -120,7 +120,7 @@ const PayTable = () => {
               <Scrollbars style={{ width: "100%", height: "40vh" }}>
                 <tbody className=" flex flex-col gap-2 max-h-[50vh]">
                   <tr className=" flex  text-left text-xs sm:text-sm md:text-md bg-transparent text-[#333333] font-titleFont overflow-hidden">
-                    <td className=" w-64 h-6 flex bg-white items-center justify-center text-left  ">
+                    <td className=" w-64 min-h-6 flex bg-white items-center justify-center text-left  ">
                       <input
                         className="w-full focus:bg-slate-200 px-2 "
                         placeholder="Name"
@@ -130,7 +130,7 @@ const PayTable = () => {
                         ref={nameRef}
                       />
                     </td>
-                    <td className=" w-32 h-6 flex bg-white items-center justify-center text-left  ">
+                    <td className=" w-32 min-h-6 flex bg-white items-center justify-center text-left  ">
                       <input
                         className="w-full focus:bg-slate-200 px-2 "
                         placeholder="Amount"
@@ -140,7 +140,7 @@ const PayTable = () => {
                         required
                       />
                     </td>
-                    <td className=" w-32 h-6 flex bg-white items-center justify-center text-left  ">
+                    <td className=" w-32 min-h-6 flex bg-white items-center justify-center text-left  ">
                       <input
                         className="w-full focus:bg-slate-200 px-2 "
                         placeholder="Contact"
@@ -150,7 +150,7 @@ const PayTable = () => {
                         ref={contRef}
                       />
                     </td>
-                    <td className=" w-64 h-6 flex bg-white items-center justify-center text-left  ">
+                    <td className=" w-64 min-h-6 flex bg-white items-center justify-center text-left  ">
                       <input
                         className="w-full focus:bg-slate-200 px-2 "
                         name="email"
@@ -160,7 +160,7 @@ const PayTable = () => {
                         ref={emailRef}
                       />
                     </td>
-                    <td className=" w-32 h-6 flex bg-white items-center justify-center text-left  ">
+                    <td className=" w-32 min-h-6 flex bg-white items-center justify-center text-left  ">
                       <input
                         className="w-full focus:bg-slate-200 px-2 "
                         name="reminderDate"
@@ -170,7 +170,7 @@ const PayTable = () => {
                         required
                       />
                     </td>
-                    <td className=" w-64 h-6 flex bg-white items-center justify-center text-left  ">
+                    <td className=" w-64 min-h-6 flex bg-white items-center justify-center text-left  ">
                       <input
                         className="w-full focus:bg-slate-200 px-2 "
                         placeholder="Message (optional)"
@@ -184,24 +184,24 @@ const PayTable = () => {
                     {state.map((item, index) => (
                       <tr
                         key={index}
-                        className="flex w-full h-6 text-left text-xs sm:text-sm md:text-md bg-transparent text-[#333333] font-titleFont overflow-hidden"
+                        className="flex min-h-[20px] w-[100%] text-left text-xs sm:text-sm md:text-md bg-transparent text-[#333333] font-titleFont overflow-hidden"
                       >
-                        <td className="w-64 h-6 flex bg-white items-center justify-center text-left">
+                        <td className="w-64 min-h-[20px] flex bg-white items-center justify-center text-left">
                           {item.name}
                         </td>
-                        <td className="w-32 h-6 flex bg-white items-center justify-center text-left">
+                        <td className="w-32 min-h-[20px] flex bg-white items-center justify-center text-left">
                           {item.amount}
                         </td>
-                        <td className="w-32 h-6 flex bg-white items-center justify-center text-left">
+                        <td className="w-32 min-h-[20px] flex bg-white items-center justify-center text-left">
                           {item.cont}
                         </td>
-                        <td className="w-64 h-6 flex bg-white items-center justify-center text-left">
+                        <td className="w-64 min-h-[20px] flex bg-white items-center justify-center text-left">
                           {item.email}
                         </td>
-                        <td className="w-32 h-6 flex bg-white items-center justify-center text-left">
+                        <td className="w-32 min-h-[20px] flex bg-white items-center justify-center text-left">
                           {item.reminderDate}
                         </td>
-                        <td className="w-64 h-6 flex bg-white items-center justify-center text-left">
+                        <td className="w-64 min-h-[20px] flex bg-white items-center justify-center text-left">
                           {item.message}
                         </td>
                       </tr>

@@ -1,5 +1,5 @@
 import React from "react";
-
+import { useRef } from "react";
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { addUser, removeUser } from "../redux/nexSlice";
@@ -12,12 +12,16 @@ import {
   signInWithPopup,
   signOut,
 } from "firebase/auth";
+import { signInWithEmailAndPassword } from "firebase/auth";
 
 const Login = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const provider = new GoogleAuthProvider();
   const auth = getAuth();
+  const emailRef = useRef("");
+  const passwordRef = useRef("");
+
   const handleGoogleLogin = () => {
     signInWithPopup(auth, provider)
       .then((result) => {
@@ -49,6 +53,24 @@ const Login = () => {
         console.log(error);
       });
   };
+  const handleLogin = () => {
+    const email = emailRef.current.value;
+    console.log(email);
+    const password = passwordRef.current.value;
+    signInWithEmailAndPassword(auth, email, password)
+      .then((userCredential) => {
+        // Signed in
+        const user = userCredential.user;
+        alert("User Signed in Successfully");
+        // ...
+      })
+      .catch((error) => {
+        const errorCode = error.code;
+        const errorMessage = error.message;
+        console.log(errorCode);
+        alert(errorMessage);
+      });
+  };
 
   const handleSignOut = () => {
     signOut(auth)
@@ -77,6 +99,7 @@ const Login = () => {
               <input
                 placeholder="example@email.com"
                 type="email"
+                ref={emailRef}
                 className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
               />
             </div>
@@ -92,10 +115,14 @@ const Login = () => {
               <input
                 placeholder="Password"
                 type="password"
+                ref={passwordRef}
                 className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
               />
             </div>
-            <button className=" w-[75%] cursor-pointer transition-all bg-blue-500 text-white px-6 py-2 rounded-lg border-blue-600 border-b-[4px] hover:brightness-110 hover:-translate-y-[1px] hover:border-b-[6px] active:border-b-[2px] active:brightness-90 active:translate-y-[2px]">
+            <button
+              onClick={handleLogin}
+              className=" w-[75%] cursor-pointer transition-all bg-blue-500 text-white px-6 py-2 rounded-lg border-blue-600 border-b-[4px] hover:brightness-110 hover:-translate-y-[1px] hover:border-b-[6px] active:border-b-[2px] active:brightness-90 active:translate-y-[2px]"
+            >
               Login
             </button>
             <div className="w-full flex justify-center items-center">
