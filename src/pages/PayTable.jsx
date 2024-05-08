@@ -7,7 +7,7 @@ import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import Menu from "../components/menu";
 import { plus } from "../assets/images";
-import { Scrollbars } from "react-custom-scrollbars";
+
 
 const PayTable = () => {
   const navigate = useNavigate();
@@ -117,7 +117,7 @@ const PayTable = () => {
                   <th className="w-64">Message</th>
                 </tr>
               </thead>
-              <Scrollbars style={{ width: "100%", height: "40vh" }}>
+              
                 <tbody className=" flex flex-col gap-2 max-h-[50vh]">
                   <tr className=" flex  text-left text-xs sm:text-sm md:text-md bg-transparent text-[#333333] font-titleFont overflow-hidden">
                     <td className=" w-64 min-h-6 flex bg-white items-center justify-center text-left  ">
@@ -208,7 +208,7 @@ const PayTable = () => {
                     ))}
                   </div>
                 </tbody>
-              </Scrollbars>
+             
             </table>
 
             <div className="w-[5%] flex flex-col gap-4 justify-start items-center mt-8">

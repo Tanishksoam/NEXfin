@@ -16,6 +16,7 @@ import FileUpload from "./components/FileUpload";
 import Profile from "./components/dashboard";
 import Pricing from "./components/pricing";
 import SignUP from "./pages/Signup";
+import { Analytics } from "@vercel/analytics/react";
 
 const Layout = () => {
   return (
@@ -73,6 +74,7 @@ const App = () => {
   return (
     <div className=" w-screen font-bodyFont">
       <RouterProvider router={Router} />
+      <Analytics />
     </div>
   );
 };
