@@ -63,9 +63,11 @@ const Header = () => {
             Home
           </h4>
         </Link>
-        <h4 className=" mb-[-2px] hover:border-b-2 hover:border-gray-600 hover:text-gray-600 px-4 py-2">
-          Transactions
-        </h4>
+        <Link to="/transactions">
+          <h4 className=" mb-[-2px] hover:border-b-2 hover:border-gray-600 hover:text-gray-600 px-4 py-2">
+            Transactions
+          </h4>
+        </Link>
         <Link to="pricing">
           <h4 className=" mb-[-2px] hover:border-b-2 hover:border-gray-600 hover:text-gray-600 px-4 py-2">
             Pricing

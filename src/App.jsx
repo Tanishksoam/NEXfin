@@ -17,6 +17,7 @@ import Profile from "./components/dashboard";
 import Pricing from "./components/pricing";
 import SignUP from "./pages/Signup";
 import { Analytics } from "@vercel/analytics/react";
+import Transactions from "./pages/Transactions";
 
 const Layout = () => {
   return (
@@ -65,6 +66,10 @@ const Router = createBrowserRouter([
       {
         path: "/dashboard",
         element: <Profile />,
+      },
+      {
+        path: "/transactions",
+        element: <Transactions />,
       },
     ],
   },
