@@ -7,6 +7,7 @@ import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import Menu from "../components/menu";
 import { plus } from "../assets/images";
+import UploadFile from "../components/UploadFile";
 
 const PayTable = () => {
   const navigate = useNavigate();
@@ -18,6 +19,11 @@ const PayTable = () => {
   const messageRef = useRef("");
   const amountRef = useRef("");
   const reminderDateRef = useRef("");
+  const [visible, setVisible] = useState(false);
+
+  const toggleVisible = () => {
+    setVisible(!visible);
+  };
 
   const handleOnClick = () => {
     const temp = {
@@ -81,6 +87,8 @@ const PayTable = () => {
 
   return (
     <>
+      {visible && <UploadFile visible2={visible} />}
+
       <div className="w-screen h-screen bg-zinc-950 flex justify-center items-center p-10">
         <div className="w-full h-full bg-[#A3A7F5] rounded-2xl flex flex-col justify-start items-center gap-4">
           <div className="w-full flex px-8">
@@ -101,7 +109,10 @@ const PayTable = () => {
             </div>
             <div className="flex gap-8 text-white ">
               <h4>filter</h4>
-              <div className="flex hover:text-[#9EE96E] cursor-pointer duration-300">
+              <div
+                onClick={() => toggleVisible()}
+                className="flex hover:text-[#9EE96E] cursor-pointer duration-300"
+              >
                 upload
               </div>
             </div>
@@ -240,6 +251,7 @@ const PayTable = () => {
           </div>
         </div>
       </div>
+
       <ToastContainer
         position="top-center"
         autoClose={1000}

@@ -10,6 +10,7 @@ import profile from "./profile.svg";
 import tag from "./tag.svg";
 import quote from "./quote.svg";
 import plus from "./plus.svg";
+import cross from "./cross.svg";
 
 export {
   logo,
@@ -24,4 +25,5 @@ export {
   tag,
   quote,
   plus,
+  cross,
 };
