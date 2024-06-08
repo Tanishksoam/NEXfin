@@ -4,7 +4,7 @@ import { useState } from "react";
 
 import { Link } from "react-router-dom";
 
-const Menu = () => {
+const MenuV = () => {
   const [menuDisplay, setMenuDisplay] = useState(false);
 
   return (
@@ -43,4 +43,4 @@ const Menu = () => {
   );
 };
 
-export default Menu;
+export default MenuV;

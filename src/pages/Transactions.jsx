@@ -1,9 +1,12 @@
-import React from 'react'
+import React from "react";
+import TableComponent from "../components/TableContent";
 
 const Transactions = () => {
   return (
-    <div>Transactions</div>
-  )
-}
+    <div>
+      <TableComponent />
+    </div>
+  );
+};
 
-export default Transactions
+export default Transactions;
