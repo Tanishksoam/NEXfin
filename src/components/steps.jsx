@@ -67,22 +67,13 @@ const Steps = () => {
               quaerat! Laborum porro iste rem adipisci!
             </h4>
           </div>
-          <div className="w-full flex  justify-center items-center gap-2">
+          <div className="w-full flex  justify-end items-center gap-2">
             <button
               onClick={handleClientBase}
               className=" w-auto px-4 h-10 bg-[#6d71b7] sm:text-sm md:text-md text-xs  rounded-full text-white flex justify-center items-center text-center"
             >
               Enter Details
             </button>
-            <p className=" text-md sm:text-lg md:text-2xl text-[#6d71b7] font-titleFont">
-              {" "}
-              Or
-            </p>
-            <Link to="/fileupload">
-              <button className=" w-auto px-4 h-10 sm:text-sm md:text-md text-xs bg-[#6d71b7] rounded-full text-white flex justify-center items-center justify-items-center text-center">
-                Upload Excel Sheet
-              </button>
-            </Link>
           </div>
         </div>
         <div className="w-1/4 h-full flex flex-col justify-center bg-zinc-900 text-white gap-2 p-4  rounded-xl border-2 border-b-4 border-r-4 border-gray-500">
