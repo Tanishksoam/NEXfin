@@ -22,22 +22,6 @@ const VisitorCounter = () => {
   }
 
   useEffect(() => {
-    const fetchVisitorCount = async () => {
-      try {
-        const response = await fetch("http://localhost:3001/api/visitor-count");
-        if (response.ok) {
-          const data = await response.json();
-          setVisitorCount(data.visitorCount);
-        } else {
-          console.error("Failed to fetch visitor count");
-        }
-      } catch (error) {
-        console.error("Error fetching visitor count:", error);
-      }
-    };
-
-    fetchVisitorCount();
-
     animateValue("value", 0, visitorCount + 128, 2000);
   }, []);
 
