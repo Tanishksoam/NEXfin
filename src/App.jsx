@@ -1,6 +1,6 @@
 import React from "react";
 import Home from "./pages/home";
-import Header from "./components/header";
+
 import "./App.css";
 import {
   createBrowserRouter,
@@ -8,7 +8,7 @@ import {
   Outlet,
   RouterProvider,
 } from "react-router-dom";
-import Footer from "./components/Footer";
+
 import PayTable from "./pages/PayTable";
 import Client from "./components/client";
 import Login from "./pages/Login";
@@ -22,10 +22,8 @@ import Transactions from "./pages/Transactions";
 const Layout = () => {
   return (
     <div className="w-screen h-screen">
-      {/* <Header /> */}
       <ScrollRestoration />
       <Outlet />
-      {/* <Footer /> */}
     </div>
   );
 };
