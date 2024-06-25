@@ -37,7 +37,7 @@ const Profile = () => {
           </div>
         </div>
       </div>
-      <TableComponent />
+
     </div>
   );
 };

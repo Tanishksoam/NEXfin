@@ -19,6 +19,9 @@ ReactDOM.createRoot(document.getElementById("root")).render(
         </PersistGate>
       </React.StrictMode>
     </Provider>
-    <Analytics />
+    <Analytics beforeSend={(e) => {
+      if(e.url.includes("login") )return null;
+      return e;
+    }} />
   </>
 );

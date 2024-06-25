@@ -7,7 +7,7 @@ import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { logo } from "../assets/images";
 import { quote } from "../assets/images";
-import Menu from "./menu";
+import MenuV from "./menu-vertical";
 
 const Client = () => {
   const [state, setState] = useState();
@@ -103,7 +103,7 @@ const Client = () => {
     <>
       <div className=" w-screen h-screen bg-zinc-950 flex gap-4 justify-between items-center pr-10 ">
         <div className="w-20 h-[90%] bg-[#9BE36D] flex flex-col rounded-e-3xl items-center">
-          <Menu />
+          <MenuV />
           <div></div>
         </div>
         <div className="w-[40%] h-[90%] bg-transparent flex flex-col rounded-3xl items-center justify-center">
